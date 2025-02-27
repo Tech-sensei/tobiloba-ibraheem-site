@@ -3,6 +3,7 @@ import { TracingBeam } from "@/components/ui/TracingBeam";
 import ContactSection from "@/components/views/Contact";
 import HeroSection from "@/components/views/Hero";
 import WorkSection from "@/components/views/Work";
+import { WorldMapDemo } from "@/components/views/WorldMapDemo";
 import { navItems } from "@/data";
 import Image from "next/image";
 
@@ -15,6 +16,7 @@ export default function Home() {
           <HeroSection />
           <WorkSection />
           <ContactSection />
+          <WorldMapDemo />
         </TracingBeam>
       </div>
     </main>

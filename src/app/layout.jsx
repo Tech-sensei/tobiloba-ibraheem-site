@@ -1,7 +1,7 @@
-import { Geist, JetBrains_Mono } from "next/font/google";
+import { Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
+const geistSans = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-geist-sans",
   weights: ["100", "400", "500", "600", "700"],

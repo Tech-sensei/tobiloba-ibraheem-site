@@ -17,20 +17,6 @@
     --accent-foreground: 240 5.9% 10%;
   }
 
-  /* .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-  } */
-
   * {
     @apply !scroll-smooth;
   }
@@ -47,13 +33,6 @@
     @apply active:outline-none;
   }
 }
-
-@layer utilities {
-  .heading {
-    @apply font-bold text-4xl md:text-5xl text-center;
-  }
-}
-
 
 /* Scrollbar Styling */
 .scrolling::-webkit-scrollbar {

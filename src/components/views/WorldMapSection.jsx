@@ -2,13 +2,13 @@
 import { WorldMap } from "../ui/WorldMap";
 import { motion } from "motion/react";
 
-export function WorldMapDemo() {
+export function WorldMapSection() {
   return (
     <div className="bg-[#000319] py-10 w-full">
       <div className="max-w-7xl mx-auto text-center">
         <p className="font-bold text-xl md:text-4xl text-white">
           Remote{" "}
-          <span className="text-neutral-400">
+          <span className="text-purple">
             {"Connectivity".split("").map((word, idx) => (
               <motion.span
                 key={idx}
@@ -23,22 +23,18 @@ export function WorldMapDemo() {
           </span>
         </p>
         <p className="text-sm md:text-lg text-neutral-500 max-w-2xl mx-auto py-4">
-          Break free from traditional boundaries. Work from anywhere, at the
-          comfort of your own studio apartment. Perfect for Nomads and
-          Travellers.
+          From bustling cities to remote corners of the world, I partner with
+          clients globally. No borders, no limits—just seamless collaboration,
+          innovation, and results-driven solutions. Wherever you are, I’m ready
+          to bring your vision to life.
         </p>
       </div>
+      
       <WorldMap
         dots={[
           {
-            start: {
-              lat: 64.2008,
-              lng: -149.4937,
-            }, // Alaska (Fairbanks)
-            end: {
-              lat: 34.0522,
-              lng: -118.2437,
-            }, // Los Angeles
+            start: { lat: 64.2008, lng: -149.4937 }, // Alaska (Fairbanks)
+            end: { lat: 34.0522, lng: -118.2437 }, // Los Angeles
           },
           {
             start: { lat: 64.2008, lng: -149.4937 }, // Alaska (Fairbanks)
@@ -59,6 +55,22 @@ export function WorldMapDemo() {
           {
             start: { lat: 28.6139, lng: 77.209 }, // New Delhi
             end: { lat: -1.2921, lng: 36.8219 }, // Nairobi
+          },
+          {
+            start: { lat: -1.2921, lng: 36.8219 }, // Nairobi
+            end: { lat: 6.5244, lng: 3.3792 }, // Lagos
+          },
+          {
+            start: { lat: 6.5244, lng: 3.3792 }, // Lagos
+            end: { lat: -26.2041, lng: 28.0473 }, // Johannesburg
+          },
+          {
+            start: { lat: -26.2041, lng: 28.0473 }, // Johannesburg
+            end: { lat: 30.0444, lng: 31.2357 }, // Cairo
+          },
+          {
+            start: { lat: 30.0444, lng: 31.2357 }, // Cairo
+            end: { lat: 35.6895, lng: 139.6917 }, // Tokyo
           },
         ]}
       />

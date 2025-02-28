@@ -1,6 +1,7 @@
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { TracingBeam } from "@/components/ui/TracingBeam";
 import ContactSection from "@/components/views/ContactSection";
+import Footer from "@/components/views/Footer";
 import HeroSection from "@/components/views/HeroSection";
 import SkillSection from "@/components/views/SkillSection";
 import WorkSection from "@/components/views/WorkSection";
@@ -16,8 +17,9 @@ export default function Home() {
           <HeroSection />
           <WorkSection />
           <SkillSection />
-          {/* <WorldMapSection /> */}
+          <WorldMapSection />
           <ContactSection />
+          <Footer/>
         </TracingBeam>
       </div>
     </main>

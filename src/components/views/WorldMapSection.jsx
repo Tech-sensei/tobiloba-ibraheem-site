@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export function WorldMapSection() {
   return (
-    <div className="bg-[#000319] py-10 w-full">
+    <div className="bg-[#000319] mt-10 lg:my-10 w-full">
       <div className="max-w-7xl mx-auto text-center">
         <p className="font-bold text-xl md:text-4xl text-white">
           Remote{" "}
@@ -29,7 +29,7 @@ export function WorldMapSection() {
           to bring your vision to life.
         </p>
       </div>
-      
+
       <WorldMap
         dots={[
           {

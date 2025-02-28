@@ -1,5 +1,7 @@
 import { Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { ToastContainer, Slide } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const geistSans = Geist_Mono({
   subsets: ["latin"],
@@ -24,6 +26,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${jetBrainsMono.variable} antialiased`}
       >
+        <ToastContainer
+          position="bottom-center"
+          autoClose={4000}
+          hideProgressBar={false}
+          closeOnClick
+          transition={Slide}
+          theme="dark"
+        />
         {children}
       </body>
     </html>

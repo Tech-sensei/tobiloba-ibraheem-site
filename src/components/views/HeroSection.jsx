@@ -110,7 +110,7 @@ const HeroSection = () => {
                   layout="fill"
                   objectFit="cover"
                   priority
-                  className="rounded-full shadow"
+                  className="rounded-full shadow object-cover"
                 />
               </motion.div>
 

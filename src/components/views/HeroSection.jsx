@@ -8,7 +8,7 @@ import Link from "next/link";
 import { Spotlight } from "../ui/Spotlight";
 const HeroSection = () => {
   return (
-    <section id="about" className="pt-20 lg:pt-36">
+    <section id="about" className="pt-20 lg:pt-36 h-screen ">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"

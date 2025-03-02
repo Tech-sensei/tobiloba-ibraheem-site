@@ -82,7 +82,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="w-full mt-10 flex flex-col lg:flex-row items-center justify-start gap-12"
+      className="w-full mt-10 lg:mt-16 flex flex-col lg:flex-row items-center justify-start gap-12"
     >
       {/* Contact Form */}
       <div className="w-full max-w-[1000px] m-auto flex flex-col items-center gap-6 bg-black-200 border border-purple/50 py-4 rounded-lg px-6 order-2 lg:order-none">

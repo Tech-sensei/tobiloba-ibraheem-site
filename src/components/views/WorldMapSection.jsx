@@ -6,7 +6,7 @@ export function WorldMapSection() {
   return (
     <div className="bg-[#000319] mt-10 lg:my-10 w-full">
       <div className="max-w-7xl mx-auto text-center">
-        <p className="font-bold text-xl md:text-4xl text-white">
+        <p className="font-bold text-xl md:text-4xl text-white font-jetBrains">
           Remote{" "}
           <span className="text-purple">
             {"Connectivity".split("").map((word, idx) => (
@@ -22,11 +22,11 @@ export function WorldMapSection() {
             ))}
           </span>
         </p>
-        <p className="text-sm md:text-lg text-neutral-500 max-w-2xl mx-auto py-4">
+        <p className="text-sm md:text-lg text-white-200 max-w-3xl mx-auto py-4 font-geist">
           From bustling cities to remote corners of the world, I partner with
           clients globally. No borders, no limits—just seamless collaboration,
-          innovation, and results-driven solutions. Wherever you are, I’m ready
-          to bring your vision to life.
+          and results-driven solutions. Wherever you are, I’m ready to bring
+          your vision to life.
         </p>
       </div>
 

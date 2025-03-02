@@ -23,10 +23,8 @@ export function WorldMapSection() {
           </span>
         </p>
         <p className="text-sm md:text-lg text-white-200 max-w-3xl mx-auto py-4 font-geist">
-          From bustling cities to remote corners of the world, I partner with
-          clients globally. No borders, no limits—just seamless collaboration,
-          and results-driven solutions. Wherever you are, I’m ready to bring
-          your vision to life.
+          No borders, no limits, just seamless collaboration, and results-driven
+          solutions — Connect with me!
         </p>
       </div>
 

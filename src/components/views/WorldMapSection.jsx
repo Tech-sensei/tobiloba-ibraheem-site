@@ -7,24 +7,10 @@ export function WorldMapSection() {
     <div className="bg-[#000319] mt-10 lg:my-10 w-full">
       <div className="max-w-7xl mx-auto text-center">
         <p className="font-bold text-xl md:text-4xl text-white font-jetBrains">
-          Remote{" "}
-          <span className="text-purple">
-            {"Connectivity".split("").map((word, idx) => (
-              <motion.span
-                key={idx}
-                className="inline-block"
-                initial={{ x: -10, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: idx * 0.04 }}
-              >
-                {word}
-              </motion.span>
-            ))}
-          </span>
+          Remote <span className="text-purple">Connectivity</span>
         </p>
         <p className="text-sm md:text-lg text-white-200 max-w-3xl mx-auto py-4 font-geist">
-          No borders, no limits, just seamless collaboration, and results-driven
-          solutions — Connect with me!
+          No borders, no limits, just seamless collaboration, and results-driven solutions — Connect with me!
         </p>
       </div>
 

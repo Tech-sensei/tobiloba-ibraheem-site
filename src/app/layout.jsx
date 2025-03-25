@@ -1,9 +1,11 @@
-import { Geist_Mono, JetBrains_Mono } from "next/font/google";
+import { Geist, JetBrains_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { ToastContainer, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FloatingNav } from "@/components/ui/FloatingNavbar";
+import Footer from "@/components/views/Footer";
 
-const geistSans = Geist_Mono({
+const geistSans = Geist({
   subsets: ["latin"],
   variable: "--font-geist-sans",
   weights: ["100", "400", "500", "600", "700"],
@@ -23,18 +25,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${jetBrainsMono.variable} antialiased`}
-      >
-        <ToastContainer
-          position="bottom-center"
-          autoClose={4000}
-          hideProgressBar={false}
-          closeOnClick
-          transition={Slide}
-          theme="dark"
-        />
+      <body className={`${geistSans.variable} ${jetBrainsMono.variable} antialiased`}>
+        <FloatingNav />
+        <ToastContainer position="bottom-center" autoClose={4000} hideProgressBar={false} closeOnClick transition={Slide} theme="dark" />
         {children}
+        <Footer />
       </body>
     </html>
   );

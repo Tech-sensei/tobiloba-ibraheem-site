@@ -1,156 +1,185 @@
 "use client";
-import { motion } from "motion/react";
-import Image from "next/image";
 
-import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa6";
-import { FiDownload } from "react-icons/fi";
+import React, { useState } from "react";
 import Link from "next/link";
-import { Spotlight } from "../ui/Spotlight";
-const HeroSection = () => {
+import Image from "next/image";
+import { motion } from "motion/react";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { LinkPreview } from "../ui/LinkPreview";
+
+const images = [
+  {
+    src: "/img1.png",
+    alt: "Sample image 1",
+  },
+  {
+    src: "/img2.png",
+    alt: "Sample image 2",
+  },
+  {
+    src: "/img3.png",
+    alt: "Sample image 3",
+  },
+  {
+    src: "/img3.png",
+    alt: "Sample image 3",
+  },
+];
+
+export function HeroSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleSelect = (index) => {
+    setCurrentIndex(index);
+  };
   return (
-    <section id="about" className="pt-20 lg:pt-36">
-      <div>
-        <Spotlight
-          className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
-          fill="white"
-        />
-        <Spotlight
-          className="h-[80vh] w-[50vw] top-10 left-full"
-          fill="purple"
-        />
-        <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
+    <section className="relative mx-auto mt-10 flex max-w-7xl flex-col items-center justify-center w-full">
+      <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-800/80">
+        <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-blue-500 to-transparent" />
       </div>
 
-      <div className="h-screen w-full bg-black-100 bg-grid-white/[0.02] absolute top-0 left-0 flex items-center justify-center"></div>
+      <div className="absolute inset-y-0 right-0 h-full w-px bg-neutral-800/80">
+        <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-blue-500 to-transparent" />
+      </div>
 
-      <div className="flex justify-center items-center relative my-20 z-10 ">
-        <div className="flex flex-col md:flex-row items-center justify-end w-full gap-10">
-          {/* text section*/}
-          <div className="flex flex-col gap-4 text-center lg:text-left w-full order-1 lg:order-none">
-            <span className="text-sm md:text-base font-jetBrains">
-              Frontend Developer
-            </span>
+      <div className="px-1 md:px-20 py-16 md:py-28">
+        <h1 className=" mx-auto max-w-4xl text-center text-2xl font-jetBrains font-bold text-white md:text-4xl lg:text-7xl !leading-[125%]">
+          {" Frontend Engineer and builder".split(" ").map((word, index) => (
+            <motion.span
+              key={index}
+              initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
+              animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+              transition={{
+                duration: 0.3,
+                delay: index * 0.1,
+                ease: "easeInOut",
+              }}
+              className="mr-2 inline-block"
+            >
+              {word}
+            </motion.span>
+          ))}
+        </h1>
+        {/* subtitle */}
+        <motion.p
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.3,
+            delay: 0.8,
+          }}
+          className=" mx-auto max-w-2xl py-4 text-center text-lg font-normal text-neutral-400"
+        >
+          Meet Tobiloba Ibraheem, a dedicated frontend engineer with a knack for transforming complex challenges into elegant, user-friendly
+          solutions.
+        </motion.p>
 
-            <h1 className="text-4xl lg:text-6xl text-white font-bold font-jetBrains leading-[150%]">
-              Hello👋, I'm <br />
-              <span className="text-purple">Tobiloba Ibraheem</span>
-            </h1>
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.3,
+            delay: 0.8,
+          }}
+          className=" mx-auto max-w-xl pb-4 text-center md:text-left text-lg font-normal text-neutral-400"
+        >
+          Building digital magic at{" "}
+          <LinkPreview
+            url="https://radiksez.com/"
+            className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"
+          >
+            Radiksez,
+          </LinkPreview>{" "}
+          one line of code at a time! 🔥
+        </motion.div>
 
-            <p className="text-base md:text-lg text-white-200 font-geist font-medium max-w-[600px] mx-auto lg:mx-0">
-              I am a frontend developer with a passion for creating beautiful
-              and functional user interfaces. I specialize in React, Next.js,
-              and Tailwind CSS.
-            </p>
+        {/* button link */}
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.3,
+            delay: 1,
+          }}
+          className=" mt-4 flex flex-wrap items-center justify-center gap-4"
+        >
+          <Link
+            href="/about"
+            className="inline-flex items-center rounded-full bg-[#151515] border border-[#3f3f3f] shadow-md backdrop-blur-md px-4 py-2 transition-all duration-300 ease-in-out group hover:shadow-lg "
+          >
+            <div className="relative w-7 h-7 rounded-full overflow-hidden shadow-xl mr-2">
+              <Image
+                src="/Tobiloba_Ibraheem_png.png"
+                alt="Profile Picture"
+                width={28}
+                height={28}
+                className="object-cover"
+                priority
+                quality={100}
+              />
+            </div>
+            <span className="font-jetBrains font-semibold text-sm text-white">About Me</span>
+            <IoIosArrowRoundForward
+              size={20}
+              className="ml-1 text-white opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"
+            />
+          </Link>
+        </motion.div>
 
-            {/* Buttons & Social Links */}
-            <div className="flex flex-col lg:flex-row md:gap-4 gap-6 items-center justify-center lg:justify-start mt-4 w-full">
-              {/* Download Button */}
-              <Link
-                href="/Tobiloba_Ibraheem_CV.pdf"
-                download="Tobiloba_Ibraheem_CV.pdf"
-                target="_blank"
-                className="w-[240px] md:w-fit relative rounded-full flex items-center gap-3 bg-slate-950 border border-transparent p-[1px] 
-                bg-gradient-to-r from-[#E2CBFF] to-[#393BB2] transition-all duration-300 ease-in-out hover:scale-101 
-                hover:from-[#393BB2] hover:to-[#E2CBFF] hover:shadow-[0px_0px_12px_#E2CBFF]"
-              >
-                <span className="flex items-center justify-center gap-2 w-full h-full bg-slate-950 rounded-full px-4 py-3">
-                  <span className="font-jetBrains font-semibold text-sm md:text-base text-white">
-                    Download CV
-                  </span>
-                  <FiDownload size={18} className="text-white" />
-                </span>
-              </Link>
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 10,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.3,
+            delay: 1.2,
+          }}
+          className=" mt-4 md:mt-20 rounded-3xl border p-4 shadow-md border-neutral-800 bg-neutral-900"
+        >
+          <div className="w-full overflow-hidden rounded-xl flex flex-col gap-8 items-start">
+            <h3 className="text-sm md:text-lg text-neutral-400 font-semibold font-geist leading-normal">
+              I've been <span className="text-purple">building</span> a lot of things, check out some of my{" "}
+              <span className="text-purple">recent projects</span>{" "}
+            </h3>
+            <Image
+              src={images[currentIndex].src}
+              alt={images[currentIndex].alt}
+              height={1000}
+              width={1000}
+              className="aspect-[16/9] h-auto w-full object-cover"
+            />
 
-              {/* Social Icons */}
-              <div className="flex items-center space-x-6">
-                {[
-                  {
-                    href: "https://github.com/Tech-sensei",
-                    icon: <FaGithub size={20} />,
-                  },
-                  { href: "#", icon: <FaLinkedinIn size={20} /> },
-                  {
-                    href: "https://x.com/Im_Tobilobah",
-                    icon: <FaTwitter size={20} />,
-                  },
-                ].map(({ href, icon }, index) => (
-                  <Link
-                    key={index}
-                    href={href}
-                    target="_blank"
-                    className="relative flex items-center justify-center w-12 h-12 rounded-full p-[2px] 
-               bg-gradient-to-r from-[#E2CBFF] to-[#393BB2] transition-all duration-300 ease-in-out 
-               hover:scale-101 hover:from-[#393BB2] hover:to-[#E2CBFF] hover:shadow-[0px_0px_12px_#E2CBFF]"
-                  >
-                    <span className="flex items-center justify-center w-full h-full bg-slate-950 rounded-full text-white">
-                      {icon}
-                    </span>
-                  </Link>
-                ))}
-              </div>
+            <div className="flex gap-2 w-full">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleSelect(index)}
+                  className={`w-full h-[3px] rounded-full transition-all duration-300 ${
+                    currentIndex === index ? "bg-white" : "bg-white/30"
+                  }`}
+                ></button>
+              ))}
             </div>
           </div>
-
-          {/* photo */}
-          <div className="w-full order-1 lg:order-none flex items-center justify-center self-end">
-            {/* Image and Animated Circle */}
-            <div className="relative w-[320px] lg:w-[600px] flex items-center justify-center">
-              {/* Profile Image */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{
-                  opacity: 1,
-                  transition: { delay: 1, duration: 0.5 },
-                }}
-                className="relative w-[260px] lg:w-[400px] h-[260px] lg:h-[400px]"
-              >
-                <Image
-                  src="/Tobiloba_Ibraheem_png.png"
-                  alt="Tobiloba Ibraheem"
-                  layout="fill"
-                  objectFit="cover"
-                  priority
-                  className="rounded-full shadow object-cover"
-                />
-              </motion.div>
-
-              {/* Animated Circle */}
-              <motion.svg
-                className="absolute w-[280px] lg:w-[420px] h-[280px] lg:h-[420px]"
-                viewBox="0 0 506 506"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <motion.circle
-                  cx="253"
-                  cy="253"
-                  r="250"
-                  stroke="#CBACF9"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  fill="transparent"
-                  initial={{ strokeDasharray: "24 10 0 0" }}
-                  animate={{
-                    strokeDasharray: [
-                      "15 120 25 25",
-                      "16 25 92 72",
-                      "4 250 22 22",
-                    ],
-                    rotate: [0, 360],
-                  }}
-                  transition={{
-                    duration: 20,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  }}
-                />
-              </motion.svg>
-            </div>
-          </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
-};
-
-export default HeroSection;
+}

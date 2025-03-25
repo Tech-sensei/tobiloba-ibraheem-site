@@ -195,8 +195,8 @@ const ContactSection = () => {
           <button
             type="submit"
             className={`w-full relative rounded-full flex items-center gap-3 bg-slate-950 border border-transparent p-[1px] 
-            bg-gradient-to-r from-[#E2CBFF] to-[#393BB2] transition-all duration-300 ease-in-out hover:scale-101 
-            hover:from-[#393BB2] hover:to-[#E2CBFF] hover:shadow-[0px_0px_12px_#E2CBFF] group`}
+            bg-gradient-to-r from-purple to-[#393BB2] transition-all duration-300 ease-in-out hover:scale-101 
+            hover:from-[#393BB2] hover:to-purple hover:shadow-[0px_0px_12px_#E2CBFF] group`}
           >
             <span className="flex items-center justify-center gap-2 w-full h-full bg-slate-950 rounded-full px-4 py-3">
               <span className="font-jetBrains font-semibold text-sm md:text-base text-white">
@@ -212,11 +212,6 @@ const ContactSection = () => {
           </button>
         </form>
       </div>
-
-      {/* World Map Section */}
-      {/* <div className="w-full lg:w-[65%] flex flex-col items-center justify-center gap-6 h-full bg-red-100 order-1 lg:order-none"> */}
-      {/* <WorldMapSection /> */}
-      {/* </div> */}
     </section>
   );
 };

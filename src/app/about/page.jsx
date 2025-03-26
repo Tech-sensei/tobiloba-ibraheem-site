@@ -12,11 +12,11 @@ const About = () => {
     <main className="relative bg-black-100 flex justify-start items-center flex-col mx-auto md:px-10 px-4 pb-12 max-w-[90rem]">
       <section className=" mx-auto mt-10  max-w-7xl flex flex-col md:flex-row items-start gap-4 md:gap-20 py-16 md:py-28 relative w-full ">
         <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-800/80">
-          <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-blue-500 to-transparent" />
+          <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-purple to-transparent" />
         </div>
 
         <div className="absolute inset-y-0 right-0 h-full w-px bg-neutral-800/80">
-          <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-blue-500 to-transparent" />
+          <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-purple to-transparent" />
         </div>
         {/* Profile Card */}
         <div className="w-full md:w-[30%] md:sticky md:top-16 flex flex-col items-center text-center gap-4">

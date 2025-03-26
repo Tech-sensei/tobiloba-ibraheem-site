@@ -35,30 +35,33 @@ export function HeroSection() {
   return (
     <section className="relative mx-auto mt-10 flex max-w-7xl flex-col items-center justify-center w-full">
       <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-800/80">
-        <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-blue-500 to-transparent" />
+        <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-purple to-transparent" />
       </div>
 
       <div className="absolute inset-y-0 right-0 h-full w-px bg-neutral-800/80">
-        <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-blue-500 to-transparent" />
+        <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-purple to-transparent" />
       </div>
 
       <div className="px-1 md:px-20 py-16 md:py-28">
         <h1 className=" mx-auto max-w-4xl text-center text-2xl font-jetBrains font-bold text-white md:text-4xl lg:text-7xl !leading-[125%]">
-          {" Frontend Engineer and builder".split(" ").map((word, index) => (
-            <motion.span
-              key={index}
-              initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
-              animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-              transition={{
-                duration: 0.3,
-                delay: index * 0.1,
-                ease: "easeInOut",
-              }}
-              className="mr-2 inline-block"
-            >
-              {word}
-            </motion.span>
-          ))}
+          {" Frontend Engineer and builder".split(" ").map((word, index) => {
+            const isSpecial = ["Engineer", "builder"];
+            return (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
+                animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                transition={{
+                  duration: 0.3,
+                  delay: index * 0.1,
+                  ease: "easeInOut",
+                }}
+                className={`mr-2 inline-block ${isSpecial.includes(word) ? "text-purple" : ""}`}
+              >
+                {word}
+              </motion.span>
+            );
+          })}
         </h1>
         {/* subtitle */}
         <motion.p

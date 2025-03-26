@@ -1,5 +1,8 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 export const blogPosts = [
   {
@@ -54,28 +57,46 @@ const slugify = (text) =>
 
 const page = () => {
   return (
-    <section className="relative mx-auto mt-10 flex max-w-7xl flex-col items-center justify-center w-full">
+    <section className="relative mx-auto mt-10 flex max-w-7xl flex-col items-start justify-center w-full">
       <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-800/80">
-        <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-blue-500 to-transparent" />
+        <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-purple to-transparent" />
       </div>
 
       <div className="absolute inset-y-0 right-0 h-full w-px bg-neutral-800/80">
-        <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-blue-500 to-transparent" />
+        <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-purple to-transparent" />
       </div>
 
       <div className="px-4 md:px-20 pt-16 md:pt-28">
         {/* header */}
         <div className="self-start max-w-3xl text-center md:text-left">
-          <p className="font-bold text-xl md:text-4xl text-white font-jetBrains !leading-[150%]">
-            All of my <span className="text-purple">Technical Knowledge </span>in one place
-          </p>
+          <motion.p className="font-bold text-xl md:text-4xl text-white font-jetBrains !leading-[150%]">
+            {"All of my Technical Knowledge in one place".split(" ").map((word, index) => {
+              const isSpecial =  ["Technical", "Knowledge"];
+
+              return (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
+                  animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: index * 0.1,
+                    ease: "easeInOut",
+                  }}
+                  className={`mr-2 inline-block ${isSpecial.includes(word) ? "text-purple" : ""}`}
+                >
+                  {word}
+                </motion.span>
+              );
+            })}
+          </motion.p>
           <p className="text-sm md:text-base text-neutral-400 max-w-2xl py-4 font-geist leading-normal">
             I'm obsessed with writing bad code. I'm also obsessed with writing. Here, I write about my experiences with code and the things
             I've learned along the way.
           </p>
         </div>
         {/* blog container */}
-        <div className="mt-10 grid md:grid-cols-2 flex-col gap-8 items-start max-w-3xl ">
+        <div className="mt-10 grid md:grid-cols-2 flex-col gap-8 items-start ">
           {blogPosts.map((blog, index) => (
             <Link key={index} href={`/blog/${slugify(blog.title)}`}>
               <div className="rounded-2xl p-4 md:p-6 border border-[#9595954d] shadow-2xl hover:bg-[#9595951a] transition-all duration-500 ease-in-out cursor-pointer">

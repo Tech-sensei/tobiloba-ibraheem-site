@@ -9,11 +9,11 @@ const SkillSection = () => {
   return (
     <section className="relative mx-auto mt-10 flex max-w-7xl flex-col items-center justify-center w-full">
       <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-800/80">
-        <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-blue-500 to-transparent" />
+        <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-purple to-transparent" />
       </div>
 
       <div className="absolute inset-y-0 right-0 h-full w-px bg-neutral-800/80">
-        <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-blue-500 to-transparent" />
+        <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-purple to-transparent" />
       </div>
 
       <div className="px-1 md:px-20 md:py-4 w-full ">

@@ -4,6 +4,7 @@ import { ToastContainer, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Footer from "@/components/views/Footer";
+import ChatFeature from "@/components/ui/Chat";
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
         <FloatingNav />
         <ToastContainer position="bottom-center" autoClose={4000} hideProgressBar={false} closeOnClick transition={Slide} theme="dark" />
         {children}
+        <ChatFeature />
         <Footer />
       </body>
     </html>

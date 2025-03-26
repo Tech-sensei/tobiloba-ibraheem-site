@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="flex flex-col gap-6 items-center justify-center w-full my-6 max-w-[90rem] mx-auto">
       <section className="relative mx-auto flex max-w-7xl flex-col items-center justify-center gap-4 w-full">
         <div className="absolute inset-x-0 top-0 h-px w-full bg-neutral-200/80 dark:bg-neutral-800/80">
-          <div className="absolute mx-auto h-px w-40 bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
+          <div className="absolute mx-auto h-px w-40 bg-gradient-to-r from-transparent via-purple to-transparent" />
         </div>
 
         <div className="flex items-center justify-center gap-4 pt-4 ">

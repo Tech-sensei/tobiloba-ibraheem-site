@@ -76,7 +76,7 @@ const About = () => {
                   className="flex items-center space-x-2 mx-0.5 px-2 py-1 transition-all duration-500 rounded-xl w-fit backdrop-blur-md bg-[##9595951a] border border-[#9595954d]  hover:bg-[#3f3f3f] "
                 >
                   <FaGithub size={20} className="" />
-                  <span className="hidden md:block text-white text-base font-semibold font-geist">GitHub</span>
+                  <span className="hidden md:block text-white text-sm md:text-base font-semibold font-geist">GitHub</span>
                 </Link>
 
                 <Link
@@ -84,7 +84,7 @@ const About = () => {
                   className="flex items-center space-x-2 mx-0.5 px-2 py-1 transition-all duration-500 rounded-xl w-fit backdrop-blur-md bg-[#9595951a] border border-[#9595954d]  hover:bg-[#3f3f3f] "
                 >
                   <FaLinkedinIn size={20} className="" />
-                  <span className="hidden md:block text-white text-base font-semibold font-geist">LinkedIn</span>
+                  <span className="hidden md:block text-white text-sm md:text-base font-semibold font-geist">LinkedIn</span>
                 </Link>
 
                 <Link
@@ -92,7 +92,7 @@ const About = () => {
                   className="flex items-center space-x-2 mx-0.5 px-2 py-1 transition-all duration-500 rounded-xl w-fit backdrop-blur-md bg-[##9595951a] border border-[#9595954d]  hover:bg-[#3f3f3f] "
                 >
                   <FaTwitter size={20} className="" />
-                  <span className="hidden md:block text-white text-base font-semibold font-geist">Twitter</span>
+                  <span className="hidden md:block text-white text-sm md:text-base font-semibold font-geist">Twitter</span>
                 </Link>
               </div>
             </div>
@@ -125,13 +125,13 @@ const About = () => {
 
               <ul className="flex flex-col gap-2 items-start w-full">
                 <li className="ml-6  list-disc">
-                  <span className="text-neutral-400 text-base font-geist">
+                  <span className="text-neutral-400 text-sm md:text-base font-geist">
                     Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.
                   </span>
                 </li>
 
                 <li className="ml-6  list-disc">
-                  <span className="text-neutral-400 text-base font-geist">
+                  <span className="text-neutral-400 text-sm md:text-base font-geist">
                     Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.
                   </span>
                 </li>
@@ -150,15 +150,15 @@ const About = () => {
               </div>
 
               <ul className="flex flex-col gap-2 items-start w-full">
-                <li className="ml-6 text-neutral-400 text-base font-geist list-disc">
+                <li className="ml-6 text-neutral-400 text-sm md:text-base font-geist list-disc">
                   Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.
                 </li>
 
-                <li className="ml-6 text-neutral-400 text-base font-geist list-disc">
+                <li className="ml-6 text-neutral-400 text-sm md:text-base font-geist list-disc">
                   Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.
                 </li>
 
-                <li className="ml-6 text-neutral-400 text-base font-geist list-disc">
+                <li className="ml-6 text-neutral-400 text-sm md:text-base font-geist list-disc">
                   Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.
                 </li>
               </ul>

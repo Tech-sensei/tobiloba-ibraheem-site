@@ -55,11 +55,11 @@ export const AnimatedTooltip = ({ items }) => {
             <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <Image
               onMouseMove={handleMouseMove}
-              height={200}
-              width={200}
+              // height={200}
+              // width={200}
               src={item.image}
               alt={item.name}
-              className="w-20 h-20 object-contain rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:shadow-purple-500/50"
+              className="w-10 h-10 md:w-20 md:h-20 object-contain rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:shadow-purple-500/50"
             />
           </div>
         </div>

@@ -91,7 +91,7 @@ const ChatFeature = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
-          className="w-[450px] fixed bottom-[4.5rem] right-6  bg-zinc-800 mb-4 rounded-xl shadow-2xl flex flex-col overflow-hidden mx-4 md:mx-0"
+          className="md:w-[450px] fixed bottom-[4.5rem] right-0 md:right-6  bg-zinc-800 mb-4 rounded-xl shadow-2xl flex flex-col overflow-hidden mx-4 md:mx-0"
         >
           <div className="p-6 bg-zinc-700 ">
             <h2 className="text-zinc-200 font-bold text-sm md:text-xl ">Got a question, a job offer, or just want to grab coffee? ☕</h2>

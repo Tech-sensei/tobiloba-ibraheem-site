@@ -55,7 +55,7 @@ export const personalProjects = [
 const Work = () => {
   const [selectedTab, setSelectedTab] = useState("client");
   return (
-    <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-10 px-5 pb-12 max-w-[90rem] ">
+    <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-6 px-4 pb-12 max-w-[90rem] w-full ">
       <section className="relative mx-auto mt-10 flex max-w-7xl flex-col items-center justify-center w-full">
         <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-800/80">
           <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-purple to-transparent" />
@@ -65,7 +65,7 @@ const Work = () => {
           <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-purple to-transparent" />
         </div>
 
-        <div className="px-4 md:px-20 pt-16 md:pt-28">
+        <div className="px-1 md:px-20 py-16 md:py-28">
           {/* header */}
           <div className="self-start max-w-3xl text-center md:text-left">
             <motion.p className="font-bold text-xl md:text-4xl text-white font-jetBrains !leading-[150%]">

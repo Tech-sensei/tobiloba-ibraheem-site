@@ -1,11 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { LinkPreview } from "../ui/LinkPreview";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 const images = [
   {
@@ -28,6 +31,7 @@ const images = [
 
 export function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const swiperRef = useRef(null);
 
   const handleSelect = (index) => {
     setCurrentIndex(index);
@@ -137,42 +141,48 @@ export function HeroSection() {
             <IoIosArrowRoundForward size={20} className="ml-1 text-white group-hover:translate-x-1 transition-all duration-300" />
           </Link>
         </motion.div>
-
+        {/* work section */}
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 10,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.3,
-            delay: 1.2,
-          }}
-          className=" mt-4 md:mt-20 rounded-3xl border p-4 shadow-md border-neutral-800 bg-neutral-900"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 1.2 }}
+          className="mt-4 md:mt-20 rounded-3xl border p-3 md:p-4 shadow-md border-neutral-800 bg-neutral-900"
         >
-          <div className="w-full overflow-hidden rounded-xl flex flex-col gap-8 items-start">
+          <div className="w-full overflow-hidden rounded-xl flex flex-col gap-4 items-start">
             <h3 className="text-sm md:text-lg text-neutral-400 font-semibold font-geist leading-normal">
               I've been <span className="text-purple">building</span> a lot of things, check out some of my{" "}
               <span className="text-purple">recent projects</span>{" "}
             </h3>
-            <Image
-              src={images[currentIndex].src}
-              alt={images[currentIndex].alt}
-              height={1000}
-              width={1000}
-              className="aspect-[16/9] h-auto w-full object-cover"
-            />
-
-            <div className="flex gap-2 w-full">
+            <Swiper
+              modules={[Autoplay]}
+              spaceBetween={1}
+              slidesPerView={1}
+              loop={true}
+              autoplay={{ delay: 8000, disableOnInteraction: false }}
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
+              onSlideChange={(swiper) => setCurrentIndex(swiper.realIndex)}
+              className="w-full max-w-[330px] md:max-w-5xl "
+            >
+              {images.map((image, index) => (
+                <SwiperSlide key={index} className="w-full">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={1000}
+                    height={1000}
+                    quality={100}
+                    className=" h-auto w-full object-contain aspect-[16/9] rounded-xl"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <div className="flex gap-2 w-full justify-center mt-4">
               {images.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => handleSelect(index)}
+                  onClick={() => swiperRef.current?.slideToLoop(index)}
                   className={`w-full h-[3px] rounded-full transition-all duration-300 ${
-                    currentIndex === index ? "bg-white" : "bg-white/30"
+                    currentIndex === index ? "bg-white scale-110" : "bg-white/30"
                   }`}
                 ></button>
               ))}

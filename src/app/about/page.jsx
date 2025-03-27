@@ -41,8 +41,8 @@ const About = () => {
 
           <Link
             href="/Tobiloba_Ibraheem_CV.pdf"
-            download="Tobiloba_Ibraheem_CV.pdf"
             target="_blank"
+            rel="noopener noreferrer"
             className="w-fit flex items-center gap-3 rounded-full bg-[#08a97c1a] border border-[#08a97c4d] shadow-md backdrop-blur-md px-4 py-1 transition-all duration-500 ease-in-out group cursor-pointer hover:shadow-md mb-4 md:mb-8"
           >
             <span className="font-jetBrains font-semibold text-sm md:text-base text-white">Download CV</span>

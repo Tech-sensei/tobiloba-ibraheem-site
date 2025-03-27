@@ -9,19 +9,19 @@ import { LinkPreview } from "../ui/LinkPreview";
 
 const images = [
   {
-    src: "/img1.png",
+    src: "/assets/everythingAfrican.png",
     alt: "Sample image 1",
   },
   {
-    src: "/img2.png",
+    src: "/assets/cs.png",
     alt: "Sample image 2",
   },
   {
-    src: "/img3.png",
+    src: "/assets/kulture.png",
     alt: "Sample image 3",
   },
   {
-    src: "/img3.png",
+    src: "/assets/brsfloors.png",
     alt: "Sample image 3",
   },
 ];
@@ -134,10 +134,7 @@ export function HeroSection() {
               />
             </div>
             <span className="font-jetBrains font-semibold text-sm text-white">About Me</span>
-            <IoIosArrowRoundForward
-              size={20}
-              className="ml-1 text-white opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"
-            />
+            <IoIosArrowRoundForward size={20} className="ml-1 text-white group-hover:translate-x-1 transition-all duration-300" />
           </Link>
         </motion.div>
 

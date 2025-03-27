@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useRef } from "react";
-import { WorldMapSection } from "./WorldMapSection";
 import { GrSend } from "react-icons/gr";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";

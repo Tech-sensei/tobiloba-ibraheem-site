@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Raleway:ital,wght@0,100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 @layer base {
   :root {
@@ -27,12 +30,23 @@
 
   body {
     @apply bg-background text-foreground;
-    @apply font-geist;
   }
 
   button {
     @apply active:outline-none;
   }
+}
+
+html {
+  font-family: var(--font-geist-sans);
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Geist", sans-serif;
 }
 
 /* Scrollbar Styling */

@@ -3,13 +3,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
+import { motion } from "motion/react";
 import { IoCalendarOutline, IoChevronForward } from "react-icons/io5";
 import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 
 const About = () => {
   return (
-    <main className="relative bg-black-100 flex justify-start items-center flex-col mx-auto md:px-10 px-4 pb-12 max-w-[90rem]">
+    <main className="relative bg-black-100 flex justify-start items-center flex-col mx-auto md:px-10 px-4 max-w-[90rem]">
       <section className=" mx-auto mt-10  max-w-7xl flex flex-col md:flex-row items-start gap-4 md:gap-20 py-16 md:py-28 relative w-full ">
         <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-800/80">
           <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-purple to-transparent" />
@@ -67,8 +68,38 @@ const About = () => {
 
             {/* about me */}
             <div className="flex flex-col items-center md:items-start">
-              <h1 className="text-white text-3xl md:text-6xl font-bold font-jetBrains leading capitalize">Tobiloba Ibraheem</h1>
-              <span className="text-white/50 text-2xl md:text-3xl font-normal md:ml-2">Frontend Engineer</span>
+              <motion.h1 className="text-white text-3xl md:text-6xl font-bold font-jetBrains leading capitalize">
+                {" Tobiloba Ibraheem".split(" ").map((word, index) => {
+                  // const isSpecial = ["Technical", "Knowledge"];
+                  return (
+                    <motion.span
+                      key={index}
+                      initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
+                      animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                      transition={{ duration: 0.3, delay: index * 0.1, ease: "easeInOut" }}
+                      className={`mr-2 inline-block `}
+                    >
+                      {word}
+                    </motion.span>
+                  );
+                })}
+              </motion.h1>
+              <motion.p className="text-2xl md:text-3xl text-neutral-400 font-normal md:ml-2 font-geist leading-normal">
+                {"Frontend Engineer".split(" ").map((word, index) => {
+                  // const isSpecial = ["Technical", "Knowledge"];
+                  return (
+                    <motion.span
+                      key={index}
+                      initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
+                      animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                      transition={{ duration: 0.2, delay: index * 0.1, ease: "easeInOut" }}
+                      className={`mr-2 inline-block `}
+                    >
+                      {word}
+                    </motion.span>
+                  );
+                })}
+              </motion.p>
 
               <div className="flex items-center gap-2 mt-6">
                 <Link
@@ -76,7 +107,7 @@ const About = () => {
                   className="flex items-center space-x-2 mx-0.5 px-2 py-1 transition-all duration-500 rounded-xl w-fit backdrop-blur-md bg-[##9595951a] border border-[#9595954d]  hover:bg-[#3f3f3f] "
                 >
                   <FaGithub size={20} className="" />
-                  <span className="hidden md:block text-white text-sm md:text-base font-semibold font-geist">GitHub</span>
+                  <span className="hidden md:block text-white text-sm font-semibold font-geist">GitHub</span>
                 </Link>
 
                 <Link
@@ -84,7 +115,7 @@ const About = () => {
                   className="flex items-center space-x-2 mx-0.5 px-2 py-1 transition-all duration-500 rounded-xl w-fit backdrop-blur-md bg-[#9595951a] border border-[#9595954d]  hover:bg-[#3f3f3f] "
                 >
                   <FaLinkedinIn size={20} className="" />
-                  <span className="hidden md:block text-white text-sm md:text-base font-semibold font-geist">LinkedIn</span>
+                  <span className="hidden md:block text-white text-sm font-semibold font-geist">LinkedIn</span>
                 </Link>
 
                 <Link
@@ -92,7 +123,7 @@ const About = () => {
                   className="flex items-center space-x-2 mx-0.5 px-2 py-1 transition-all duration-500 rounded-xl w-fit backdrop-blur-md bg-[##9595951a] border border-[#9595954d]  hover:bg-[#3f3f3f] "
                 >
                   <FaTwitter size={20} className="" />
-                  <span className="hidden md:block text-white text-sm md:text-base font-semibold font-geist">Twitter</span>
+                  <span className="hidden md:block text-white text-sm font-semibold font-geist">Twitter</span>
                 </Link>
               </div>
             </div>

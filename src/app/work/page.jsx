@@ -6,24 +6,35 @@ import { HoverEffect } from "@/components/ui/HoverEffect";
 
 export const clientProjects = [
   {
-    title: "Microsoft",
-    description: "A company that develops software, personal computers, and related services.",
-    link: "https://microsoft.com",
-    image: "/img1.png",
-    techStack: ["JavaScript", "Next.js", "React", "Tailwind"],
+    title: "EverythingAfrican",
+    description:
+      "A comprehensive e-commerce platform offering fresh produce and authentic African recipes. With a seamless shopping experience, EverythingAfrican ensures high-quality products are delivered directly to customers across the UK.",
+    link: "https://www.everythingafrican.co.uk/",
+    image: "/assets/everythingAfrican.png",
+    techStack: ["JavaScript", "Nuxt.js", "Vue", "Tailwind"],
   },
   {
-    title: "Google",
-    description: "A multinational technology company specializing in Internet-related services and products.",
-    link: "https://google.com",
-    image: "/img2.png",
-    techStack: ["Go", "JavaScript", "React", "Material UI"],
+    title: "Brs Floors",
+    description:
+      "A premium flooring solutions provider specializing in hardwood, luxury vinyl, and durable surfaces. Serving Georgia, BRS Floors combines expert installation with top-tier materials to enhance residential and commercial spaces.",
+    link: "https://brsflooring.com/",
+    image: "/assets/brsfloors.png",
+    techStack: ["JavaScript", "React", "Next", "Tailwind"],
   },
   {
-    title: "Stripe",
-    description: "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
-    image: "/img3.png",
+    title: "Kulture Event Center",
+    description:
+      "Metro Atlanta’s premier event venue, renowned for exceptional service, expert event planning, and warm hospitality. Kulture Event Center is dedicated to creating unforgettable experiences for every occasion.",
+    link: "https://kultureevents.com/",
+    image: "/assets/kulture.png",
+    techStack: ["Next", "Tailwind", "JavaScript"],
+  },
+  {
+    title: "Customer Success Africa ",
+    description:
+      "A platform dedicated to bridging the knowledge and skill gap for Customer Success Managers (CSMs) and Tech CEOs. Customer Success Africa empowers businesses with the tools, strategies, and insights needed to deliver exceptional customer experiences (CX).",
+    link: "https://customersuccessafrica.com/",
+    image: "/assets/cs.png",
     techStack: ["React", "Tailwind", "JavaScript"],
   },
 ];
@@ -90,10 +101,25 @@ const Work = () => {
                 );
               })}
             </motion.p>
-            <p className="text-sm md:text-base text-neutral-400 max-w-2xl py-4 font-geist leading-normal">
-              Come explore the fruits of my labor, from small experiments to full-blown web applications, each project showcases my love for
-              coding and design.
-            </p>
+
+            <motion.p className="text-sm md:text-base text-neutral-400 max-w-2xl py-4 font-geist leading-normal">
+              {" Come explore the fruits of my labor, from small experiments to full-blown web applications, each project showcases my love for coding and design."
+                .split(" ")
+                .map((word, index) => {
+                  // const isSpecial = ["Technical", "Knowledge"];
+                  return (
+                    <motion.span
+                      key={index}
+                      initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
+                      animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                      transition={{ duration: 0.1, delay: index * 0.1, ease: "easeInOut" }}
+                      className={`mr-2 inline-block text-neutral-400`}
+                    >
+                      {word}
+                    </motion.span>
+                  );
+                })}
+            </motion.p>
           </div>
 
           {/* Tabs for Client & Personal Projects */}

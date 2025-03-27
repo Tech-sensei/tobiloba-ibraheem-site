@@ -1,4 +1,4 @@
-import { Geist, JetBrains_Mono, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { ToastContainer, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -6,16 +6,28 @@ import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Footer from "@/components/views/Footer";
 import ChatFeature from "@/components/ui/Chat";
 
-const geistSans = Geist({
-  subsets: ["latin"],
+const geistSans = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Geist-VariableFont_wght.ttf",
+      weight: "100 900",
+      style: "normal",
+    },
+  ],
   variable: "--font-geist-sans",
-  weights: ["100", "400", "500", "600", "700"],
+  display: "swap",
 });
 
-const jetBrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
+const jetBrainsMono = localFont({
+  src: [
+    {
+      path: "../../public/fonts/JetBrainsMono-VariableFont_wght.ttf",
+      weight: "100 900",
+      style: "normal",
+    },
+  ],
   variable: "--font-jetbrains-mono",
-  weights: ["100", "400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata = {

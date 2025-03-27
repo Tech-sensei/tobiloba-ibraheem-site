@@ -2,7 +2,86 @@
 
 import React from "react";
 import { useParams } from "next/navigation";
-import { blogPosts } from "../page";
+
+export const blogPosts = [
+  {
+    title: "What is a website template",
+    date: "November 28, 2022",
+    image: "/img1.png",
+    shortDesc:
+      "A website template is a pre-designed website that can be customized to suit your needs. In this post, we’ll take a look at what a website template is and why it can be a great creative outlet for writers",
+    content: `
+      <p>Developers are always looking for the most efficient way to create a website. Website templates provide a great solution for quickly building a site. In this guide, we will discuss:</p>
+      <ul>
+        <li>What website templates are</li>
+        <li>How they benefit developers</li>
+        <li>How to make money from them</li>
+        <li>Examples of good website templates</li>
+      </ul>
+
+      <h2>Introduction</h2>
+      <p>A website template is a pre-designed layout used to quickly create a website...</p>
+
+      <pre><code>
+      const template = "This is to show a code snippet";
+      export const ReactComponent = () => {
+        return &lt;div&gt;Here's how to write a component in JSX&lt;/div&gt;;
+      };
+      </code></pre>
+
+      <h2>How to Benefit from Templates</h2>
+      <p>Using templates provides developers an efficient way to create websites...</p>
+
+      <h2>Making Money from Templates</h2>
+      <p>Developers can create templates or purchase existing ones and resell them...</p>
+
+      <h2>Examples of Good Website Templates</h2>
+      <p>Popular website templates include WordPress, Joomla, and Drupal...</p>
+
+      <h2>Conclusion</h2>
+      <p>Website templates provide an efficient way to create a website without starting from scratch...</p>
+    `,
+  },
+
+  {
+    date: "November 28, 2022",
+    title: "What is a blog anyway",
+    image: "/img2.png",
+    shortDesc:
+      "A website template is a pre-designed website that can be customized to suit your needs. In this post, we’ll take a look at what a website template is and why it can be a great creative outlet for writers",
+    content: `
+      <p>Developers are always looking for the most efficient way to create a website. Website templates provide a great solution for quickly building a site. In this guide, we will discuss:</p>
+      <ul>
+        <li>What website templates are</li>
+        <li>How they benefit developers</li>
+        <li>How to make money from them</li>
+        <li>Examples of good website templates</li>
+      </ul>
+
+      <h2>Introduction</h2>
+      <p>A website template is a pre-designed layout used to quickly create a website...</p>
+
+      <pre><code>
+      const template = "This is to show a code snippet";
+      export const ReactComponent = () => {
+        return &lt;div&gt;Here's how to write a component in JSX&lt;/div&gt;;
+      };
+      </code></pre>
+
+      <h2>How to Benefit from Templates</h2>
+      <p>Using templates provides developers an efficient way to create websites...</p>
+
+      <h2>Making Money from Templates</h2>
+      <p>Developers can create templates or purchase existing ones and resell them...</p>
+
+      <h2>Examples of Good Website Templates</h2>
+      <p>Popular website templates include WordPress, Joomla, and Drupal...</p>
+
+      <h2>Conclusion</h2>
+      <p>Website templates provide an efficient way to create a website without starting from scratch...</p>
+    `,
+  },
+];
 
 const slugify = (text) =>
   text

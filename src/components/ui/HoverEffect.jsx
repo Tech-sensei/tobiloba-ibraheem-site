@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa"; // Import GitHub icon
-import { SiJavascript, SiReact, SiTypescript, SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { SiJavascript, SiReact, SiTypescript, SiTailwindcss, SiVuedotjs, SiNextdotjs, SiNuxtdotjs } from "react-icons/si";
 
 export const HoverEffect = ({ items, className }) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
@@ -57,6 +57,12 @@ export const HoverEffect = ({ items, className }) => {
               )}
               {item.techStack.includes("Next") && (
                 <SiNextdotjs className="transition-all duration-500 ease-in-out text-gray-500 group-hover:text-slate-100 text-lg" />
+              )}
+              {item.techStack.includes("Vue") && (
+                <SiVuedotjs className="transition-all duration-500 ease-in-out text-gray-500 group-hover:text-green-500 text-lg" />
+              )}
+              {item.techStack.includes("Nuxt") && (
+                <SiNuxtdotjs className="transition-all duration-500 ease-in-out text-gray-500 group-hover:text-green-400 text-lg" />
               )}
             </div>
 

@@ -16,7 +16,7 @@ const navItems = [
 export const FloatingNav = ({ className }) => {
   const pathname = usePathname();
   const [time, setTime] = useState("");
-  const [location, setLocation] = useState("Loading...");
+  const [location, setLocation] = useState("");
 
   useEffect(() => {
     const updateTime = () => {

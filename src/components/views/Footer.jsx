@@ -16,14 +16,14 @@ const Footer = () => {
 
         {/* Social Icons */}
         <div className="flex items-center space-x-6">
-          <Link href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/Tech-sensei" target="_blank" rel="noopener noreferrer">
             <FaGithub size={20} className="text-zinc-500 hover:text-white transition duration-300" />
           </Link>
-          <Link href="https://twitter.com/yourtwitter" target="_blank" rel="noopener noreferrer">
-            <FaTwitter size={20} className="text-zinc-500 hover:text-blue-400 transition duration-300" />
-          </Link>
-          <Link href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.linkedin.com/in/tobiloba-ibraheem" target="_blank" rel="noopener noreferrer">
             <FaLinkedinIn size={20} className="text-zinc-500 hover:text-blue-600 transition duration-300" />
+          </Link>
+          <Link href="https://x.com/Im_Tobilobah" target="_blank" rel="noopener noreferrer">
+            <FaTwitter size={20} className="text-zinc-500 hover:text-blue-400 transition duration-300" />
           </Link>
         </div>
       </section>

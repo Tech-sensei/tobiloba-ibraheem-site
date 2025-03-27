@@ -9,7 +9,7 @@ import { FaHome, FaRegUserCircle, FaBriefcase, FaRegNewspaper, FaImages } from "
 const navItems = [
   { name: "Home", link: "/", icon: <FaHome /> },
   { name: "About", link: "/about", icon: <FaRegUserCircle /> },
-  { name: "Projects", link: "/work", icon: <FaBriefcase /> },
+  { name: "Projects", link: "/projects", icon: <FaBriefcase /> },
   { name: "Blog", link: "/blog", icon: <FaRegNewspaper /> },
 ];
 

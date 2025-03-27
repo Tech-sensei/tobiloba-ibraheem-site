@@ -46,7 +46,7 @@ export function HeroSection() {
         <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-purple to-transparent" />
       </div>
 
-      <div className="px-1 md:px-20 py-16 md:py-28 w-full">
+      <div className="px-1 md:px-20 pt-16 pb-10 md:pt-28 w-full">
         <h1 className=" mx-auto max-w-4xl text-center text-2xl font-jetBrains font-bold text-white md:text-4xl lg:text-7xl !leading-[125%]">
           {" Frontend Engineer and builder".split(" ").map((word, index) => {
             const isSpecial = ["Engineer", "builder"];

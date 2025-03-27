@@ -47,18 +47,18 @@ const techStack = [
   },
   { id: 15, name: "Vue", designation: "Javascript Framework", image: vue },
   { id: 14, name: "Vite", designation: "Build Tool", image: vite },
-  {
-    id: 5,
-    name: "Node.js",
-    designation: "Backend Runtime",
-    image: nodejs,
-  },
-  {
-    id: 6,
-    name: "MongoDB",
-    designation: "NoSQL Database",
-    image: mongodb,
-  },
+  // {
+  //   id: 5,
+  //   name: "Node.js",
+  //   designation: "Backend Runtime",
+  //   image: nodejs,
+  // },
+  // {
+  //   id: 6,
+  //   name: "MongoDB",
+  //   designation: "NoSQL Database",
+  //   image: mongodb,
+  // },
   {
     id: 7,
     name: "Tailwind CSS",
@@ -71,12 +71,12 @@ const techStack = [
     designation: "State Management",
     image: redux,
   },
-  {
-    id: 9,
-    name: "Docker",
-    designation: "Containerization",
-    image: docker,
-  },
+  // {
+  //   id: 9,
+  //   name: "Docker",
+  //   designation: "Containerization",
+  //   image: docker,
+  // },
   {
     id: 10,
     name: "Git",

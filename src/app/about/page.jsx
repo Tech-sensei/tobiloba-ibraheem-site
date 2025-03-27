@@ -103,7 +103,7 @@ const About = () => {
 
               <div className="flex items-center gap-2 mt-6">
                 <Link
-                  href="/"
+                  href="/https://github.com/Tech-sensei"
                   className="flex items-center space-x-2 mx-0.5 px-2 py-1 transition-all duration-500 rounded-xl w-fit backdrop-blur-md bg-[##9595951a] border border-[#9595954d]  hover:bg-[#3f3f3f] "
                 >
                   <FaGithub size={20} className="" />
@@ -111,7 +111,7 @@ const About = () => {
                 </Link>
 
                 <Link
-                  href="/"
+                  href="/https://www.linkedin.com/in/tobiloba-ibraheem"
                   className="flex items-center space-x-2 mx-0.5 px-2 py-1 transition-all duration-500 rounded-xl w-fit backdrop-blur-md bg-[#9595951a] border border-[#9595954d]  hover:bg-[#3f3f3f] "
                 >
                   <FaLinkedinIn size={20} className="" />
@@ -119,7 +119,7 @@ const About = () => {
                 </Link>
 
                 <Link
-                  href="/"
+                  href="/https://x.com/Im_Tobilobah"
                   className="flex items-center space-x-2 mx-0.5 px-2 py-1 transition-all duration-500 rounded-xl w-fit backdrop-blur-md bg-[##9595951a] border border-[#9595954d]  hover:bg-[#3f3f3f] "
                 >
                   <FaTwitter size={20} className="" />

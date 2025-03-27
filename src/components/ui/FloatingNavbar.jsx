@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { FaHome, FaRegUserCircle, FaBriefcase, FaRegNewspaper, FaImages } from "react-icons/fa";
+import { FaHome, FaRegUserCircle, FaBriefcase, FaRegNewspaper } from "react-icons/fa";
 
 const navItems = [
   { name: "Home", link: "/", icon: <FaHome /> },
@@ -16,23 +16,38 @@ const navItems = [
 export const FloatingNav = ({ className }) => {
   const pathname = usePathname();
   const [time, setTime] = useState("");
+  const [location, setLocation] = useState("Loading...");
 
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
       const options = {
-        timeZone: "Africa/Lagos",
         hour: "2-digit",
         minute: "2-digit",
         second: "2-digit",
         hour12: true,
       };
-      const formatter = new Intl.DateTimeFormat("en-NG", options);
+      const formatter = new Intl.DateTimeFormat(undefined, options);
       setTime(formatter.format(now));
     };
     updateTime();
     const interval = setInterval(updateTime, 1000);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    try {
+      const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const formattedTimeZone = timeZone.split("/")[1].replace("_", " "); // Remove continent, format nicely
+      fetch("https://ipapi.co/json/")
+        .then((res) => res.json())
+        .then((data) => {
+          setLocation(`${data.country_name} (${formattedTimeZone})`);
+        })
+        .catch(() => setLocation("Unknown Location"));
+    } catch {
+      setLocation("Unknown Location");
+    }
   }, []);
 
   return (
@@ -46,8 +61,8 @@ export const FloatingNav = ({ className }) => {
           className
         )}
       >
-        {/* Logo */}
-        <p className="hidden sm:block text-white font-normal text-[10px] px-4 py-2 font-jetBrains">Nigeria,Lagos</p>
+        {/* Location */}
+        <p className="hidden sm:block text-white font-normal text-[10px] px-4 py-2 font-jetBrains">{location}</p>
 
         {/* Nav Items */}
         <div className="flex items-center rounded-2xl border border-[#3f3f3f] shadow-md backdrop-blur-md bg-[#0000004d] p-1 w-[80%] md:w-fit justify-around md:justify-normal">

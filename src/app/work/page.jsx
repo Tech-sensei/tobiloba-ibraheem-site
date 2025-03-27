@@ -41,11 +41,11 @@ export const clientProjects = [
 
 export const personalProjects = [
   {
-    title: "Netflix Clone",
-    description: "A streaming service clone built with modern web technologies.",
-    link: "https://netflix.com",
-    image: "/img3.png",
-    techStack: ["TypeScript", "React", "Tailwind"],
+    title: "Portfolio Website",
+    description: "This is a portfolio website built for myself to show the world my works and to let people know about Tobiloba Ibraheem ",
+    link: "https://tobiloba-ibraheem-site.vercel.app/",
+    image: "/assets/portfolio.png",
+    techStack: ["TypeScript", "React", "Next", "Tailwind"],
   },
   {
     title: "Amazon UI",

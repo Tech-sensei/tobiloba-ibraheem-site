@@ -46,7 +46,7 @@ export function HeroSection() {
         <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-purple to-transparent" />
       </div>
 
-      <div className="px-1 md:px-20 py-16 md:py-28">
+      <div className="px-1 md:px-20 py-16 md:py-28 w-full">
         <h1 className=" mx-auto max-w-4xl text-center text-2xl font-jetBrains font-bold text-white md:text-4xl lg:text-7xl !leading-[125%]">
           {" Frontend Engineer and builder".split(" ").map((word, index) => {
             const isSpecial = ["Engineer", "builder"];
@@ -101,7 +101,7 @@ export function HeroSection() {
           Building digital magic at{" "}
           <LinkPreview
             url="https://radiksez.com/"
-            className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"
+            className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500 text-white"
           >
             Radiksez,
           </LinkPreview>{" "}
@@ -141,6 +141,7 @@ export function HeroSection() {
             <IoIosArrowRoundForward size={20} className="ml-1 text-white group-hover:translate-x-1 transition-all duration-300" />
           </Link>
         </motion.div>
+        
         {/* work section */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}

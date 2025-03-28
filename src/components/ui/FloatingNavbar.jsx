@@ -44,9 +44,9 @@ export const FloatingNav = ({ className }) => {
         .then((data) => {
           setLocation(`${data.country_name} (${formattedTimeZone})`);
         })
-        .catch(() => setLocation("Unknown Location"));
+        .catch(() => setLocation("Earth🌍"));
     } catch {
-      setLocation("Unknown Location");
+      setLocation("Earth🌍");
     }
   }, []);
 

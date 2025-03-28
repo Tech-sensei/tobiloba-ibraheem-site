@@ -2,13 +2,21 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect } from "react";
+import { getCalApi } from "@calcom/embed-react";
 import { motion } from "motion/react";
 import { IoCalendarOutline, IoChevronForward } from "react-icons/io5";
 import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 
 const About = () => {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "coffee-talk" });
+      cal("ui", { cssVarsPerTheme: { light: { "cal-brand": "#000319" } }, hideEventTypeDetails: false, layout: "week_view" });
+    })();
+  }, []);
+
   return (
     <main className="relative bg-black-100 flex justify-start items-center flex-col mx-auto md:px-10 px-4 max-w-[90rem]">
       <section className=" mx-auto mt-10  max-w-7xl flex flex-col md:flex-row items-start gap-4 md:gap-20 py-16 md:py-28 relative w-full ">
@@ -58,13 +66,19 @@ const About = () => {
           {/* introduction */}
           <div className="md:max-w-[90%] mx-auto flex flex-col items-center md:items-start">
             {/* schedule a call  */}
-            <div className="w-fit flex items-center gap-2 rounded-full bg-[#08a97c1a] border border-[#08a97c4d] shadow-md backdrop-blur-md px-2 py-1 transition-all duration-500 ease-in-out group cursor-pointer hover:scale-[1.02] hover:shadow-md mb-4 md:mb-8">
+            <button
+              type="button"
+              data-cal-namespace="coffee-talk"
+              data-cal-link="oluwatobi/coffee-talk"
+              data-cal-config='{"layout":"month_view"}'
+              className="w-fit flex items-center gap-2 rounded-full bg-[#08a97c1a] border border-[#08a97c4d] shadow-md backdrop-blur-md px-2 py-1 transition-all duration-500 ease-in-out group cursor-pointer hover:scale-[1.02] hover:shadow-md mb-4 md:mb-8 outline-none"
+            >
               <IoCalendarOutline size={28} className="text-[#08a97c] pl-2" />
               <p className="text-white text-sm md:text-base font-jetBrains ">Schedule a call</p>
-              <Link href="https://cal.com/" className="flex items-center justify-center gap-2.5 rounded-full w-8 h-8 bg-black-100 ">
+              <span className="flex items-center justify-center gap-2.5 rounded-full w-8 h-8 bg-black-100 ">
                 <IoChevronForward className="text-white group-hover:transform group-hover:translate-x-1 transition-all duration-500 ease-in-out " />
-              </Link>
-            </div>
+              </span>
+            </button>
 
             {/* about me */}
             <div className="flex flex-col items-center md:items-start">

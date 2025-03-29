@@ -153,7 +153,7 @@ const About = () => {
             <div className="flex flex-col items-start gap-4 w-full mt-6">
               <div className="flex items-start justify-between w-full">
                 <div className="flex flex-col items-start">
-                  <h3 className="text-white text-base font-semibold uppercase font-jetBrains">upwork freelancer</h3>
+                  <h3 className="text-white text-base font-semibold uppercase font-jetBrains">freelancer</h3>
                   <span className="text-sm text-[#08a97c] font-geist">Senior Frontend Developer</span>
                 </div>
 
@@ -163,14 +163,26 @@ const About = () => {
               <ul className="flex flex-col gap-2 items-start w-full">
                 <li className="ml-6  list-disc">
                   <span className="text-neutral-400 text-sm md:text-base font-geist">
-                    Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.
+                    Achieved a 30% reduction in time-to-market by optimizing development pipelines and leveraging CI/CD.
                   </span>
                 </li>
 
                 <li className="ml-6  list-disc">
                   <span className="text-neutral-400 text-sm md:text-base font-geist">
-                    Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.
+                    Provided end-to-end project management, from prototyping and planning to deployment.
                   </span>
+                </li>
+                
+                <li className="ml-6  list-disc">
+                  <span className="text-neutral-400 text-sm md:text-base font-geist">
+                    Delivered modern, responsive applications for various industries, consistently meeting deadlines and budget constraints.
+                  </span>
+                </li>
+                
+                <li className="ml-6  list-disc">
+                  <span className="text-neutral-400 text-sm md:text-base font-geist">
+                    Established lasting client relationships, with repeat projects based on proven performance.
+                    </span>
                 </li>
               </ul>
             </div>
@@ -188,15 +200,15 @@ const About = () => {
 
               <ul className="flex flex-col gap-2 items-start w-full">
                 <li className="ml-6 text-neutral-400 text-sm md:text-base font-geist list-disc">
-                  Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.
+                  Increased developer efficiency by 50% by establishing a streamlined design-developer workflow.
                 </li>
 
                 <li className="ml-6 text-neutral-400 text-sm md:text-base font-geist list-disc">
-                  Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.
+                  Delivered a consistent, high-performing user experience across multiple devices.
                 </li>
 
                 <li className="ml-6 text-neutral-400 text-sm md:text-base font-geist list-disc">
-                  Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.
+                  Reduced page-load times by 30% through code-splitting, caching, and image optimization.
                 </li>
               </ul>
             </div>

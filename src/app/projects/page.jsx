@@ -47,20 +47,20 @@ export const personalProjects = [
     image: "/assets/portfolio.png",
     techStack: ["TypeScript", "React", "Next", "Tailwind"],
   },
-  {
-    title: "Amazon UI",
-    description: "A personal project replicating Amazon’s front-end experience.",
-    link: "https://amazon.com",
-    image: "/img2.png",
-    techStack: ["React", "Tailwind", "JavaScript"],
-  },
-  {
-    title: "Meta Dashboard",
-    description: "An experimental dashboard UI using Next.js & Tailwind.",
-    link: "https://meta.com",
-    image: "/img1.png",
-    techStack: ["React", "Tailwind"],
-  },
+  // {
+  //   title: "Amazon UI",
+  //   description: "A personal project replicating Amazon’s front-end experience.",
+  //   link: "https://amazon.com",
+  //   image: "/img2.png",
+  //   techStack: ["React", "Tailwind", "JavaScript"],
+  // },
+  // {
+  //   title: "Meta Dashboard",
+  //   description: "An experimental dashboard UI using Next.js & Tailwind.",
+  //   link: "https://meta.com",
+  //   image: "/img1.png",
+  //   techStack: ["React", "Tailwind"],
+  // },
 ];
 
 const Work = () => {

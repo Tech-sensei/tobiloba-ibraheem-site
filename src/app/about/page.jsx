@@ -2,14 +2,21 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import React, { useEffect } from "react";
-// import { getCalApi } from "@calcom/embed-react";
+import { useEffect, useState } from "react";
+import { PopupButton } from "react-calendly";
 import { motion } from "motion/react";
 import { IoCalendarOutline, IoChevronForward } from "react-icons/io5";
 import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 
 const About = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // Ensures the component is mounted before using document
+  }, []);
+
+  if (!isClient) return null; // Avoid rendering on the serve
   // useEffect(() => {
   //   (async function () {
   //     const cal = await getCalApi({ namespace: "coffee-talk" });
@@ -66,16 +73,24 @@ const About = () => {
           {/* introduction */}
           <div className="md:max-w-[90%] mx-auto flex flex-col items-center md:items-start">
             {/* schedule a call  */}
-            <button
-              type="button"
-              className="w-fit flex items-center gap-2 rounded-full bg-[#08a97c1a] border border-[#08a97c4d] shadow-md backdrop-blur-md px-2 py-1 transition-all duration-500 ease-in-out group cursor-pointer hover:scale-[1.02] hover:shadow-md mb-4 md:mb-8 outline-none"
-            >
-              <IoCalendarOutline size={28} className="text-[#08a97c] pl-2" />
-              <p className="text-white text-sm md:text-base font-jetBrains ">Schedule a call</p>
-              <span className="flex items-center justify-center gap-2.5 rounded-full w-8 h-8 bg-black-100 ">
-                <IoChevronForward className="text-white group-hover:transform group-hover:translate-x-1 transition-all duration-500 ease-in-out " />
-              </span>
-            </button>
+
+            {isClient && (
+              <div className="w-fit flex items-center gap-2 rounded-full bg-[#08a97c1a] border border-[#08a97c4d] shadow-md backdrop-blur-md px-2 py-1 transition-all duration-500 ease-in-out group cursor-pointer hover:scale-[1.02] hover:shadow-md mb-4 md:mb-8 outline-none">
+                <PopupButton
+                  url="https://calendly.com/ibraheemtobiloba15/coffee-chat-with-tobiloba"
+                  rootElement={document.getElementById("root") || document.body}
+                  text={
+                    <div className="flex items-center gap-2">
+                      <IoCalendarOutline size={28} className="text-[#08a97c] pl-2" />
+                      <p className="text-white text-sm md:text-base font-jetBrains">Schedule a call</p>
+                      <span className="flex items-center justify-center gap-2.5 rounded-full w-8 h-8 bg-black-100">
+                        <IoChevronForward className="text-white group-hover:transform group-hover:translate-x-1 transition-all duration-500 ease-in-out" />
+                      </span>
+                    </div>
+                  }
+                />
+              </div>
+            )}
 
             {/* about me */}
             <div className="flex flex-col items-center md:items-start">

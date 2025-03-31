@@ -3,19 +3,19 @@
 import Link from "next/link";
 import Image from "next/image";
 import React, { useEffect } from "react";
-import { getCalApi } from "@calcom/embed-react";
+// import { getCalApi } from "@calcom/embed-react";
 import { motion } from "motion/react";
 import { IoCalendarOutline, IoChevronForward } from "react-icons/io5";
 import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 
 const About = () => {
-  useEffect(() => {
-    (async function () {
-      const cal = await getCalApi({ namespace: "coffee-talk" });
-      cal("ui", { cssVarsPerTheme: { light: { "cal-brand": "#000319" } }, hideEventTypeDetails: false, layout: "week_view" });
-    })();
-  }, []);
+  // useEffect(() => {
+  //   (async function () {
+  //     const cal = await getCalApi({ namespace: "coffee-talk" });
+  //     cal("ui", { cssVarsPerTheme: { light: { "cal-brand": "#000319" } }, hideEventTypeDetails: false, layout: "week_view" });
+  //   })();
+  // }, []);
 
   return (
     <main className="relative bg-black-100 flex justify-start items-center flex-col mx-auto md:px-10 px-4 max-w-[90rem]">
@@ -68,9 +68,6 @@ const About = () => {
             {/* schedule a call  */}
             <button
               type="button"
-              data-cal-namespace="coffee-talk"
-              data-cal-link="oluwatobi/coffee-talk"
-              data-cal-config='{"layout":"month_view"}'
               className="w-fit flex items-center gap-2 rounded-full bg-[#08a97c1a] border border-[#08a97c4d] shadow-md backdrop-blur-md px-2 py-1 transition-all duration-500 ease-in-out group cursor-pointer hover:scale-[1.02] hover:shadow-md mb-4 md:mb-8 outline-none"
             >
               <IoCalendarOutline size={28} className="text-[#08a97c] pl-2" />
@@ -186,17 +183,17 @@ const About = () => {
                     Provided end-to-end project management, from prototyping and planning to deployment.
                   </span>
                 </li>
-                
+
                 <li className="ml-6  list-disc">
                   <span className="text-neutral-400 text-sm md:text-base font-geist">
                     Delivered modern, responsive applications for various industries, consistently meeting deadlines and budget constraints.
                   </span>
                 </li>
-                
+
                 <li className="ml-6  list-disc">
                   <span className="text-neutral-400 text-sm md:text-base font-geist">
                     Established lasting client relationships, with repeat projects based on proven performance.
-                    </span>
+                  </span>
                 </li>
               </ul>
             </div>

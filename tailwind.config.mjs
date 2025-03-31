@@ -75,6 +75,7 @@ export default {
     },
   },
   plugins: [
+    // tailwindcss - animate,
     addVariablesForColors,
     function ({ matchUtilities, theme }) {
       matchUtilities(

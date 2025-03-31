@@ -33,7 +33,7 @@ const page = () => {
   if (loading) {
     return (
       <main className="flex justify-center items-center h-screen text-white">
-        <p>Loading...</p>
+        <span className="spinner"></span> <p className="ml-4">Loading...</p>
       </main>
     );
   }

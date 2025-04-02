@@ -37,7 +37,12 @@ export function HeroSection() {
     setCurrentIndex(index);
   };
   return (
-    <section className="relative mx-auto mt-10 flex max-w-7xl flex-col items-center justify-center w-full">
+    <section
+      className="relative mx-auto mt-10 flex max-w-7xl flex-col items-center justify-center w-full bg-no-repeat bg-center bg-cover h-auto bg-[#08a97c1c]/1"
+      style={{
+        backgroundImage: "url('/assets/hero-background-lines.svg')",
+      }}
+    >
       <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-800/80">
         <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-purple to-transparent" />
       </div>
@@ -141,7 +146,7 @@ export function HeroSection() {
             <IoIosArrowRoundForward size={20} className="ml-1 text-white group-hover:translate-x-1 transition-all duration-300" />
           </Link>
         </motion.div>
-        
+
         {/* work section */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}

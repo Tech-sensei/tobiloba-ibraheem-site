@@ -47,20 +47,14 @@ export const personalProjects = [
     image: "/assets/portfolio.png",
     techStack: ["TypeScript", "React", "Next", "Tailwind"],
   },
-  // {
-  //   title: "Amazon UI",
-  //   description: "A personal project replicating Amazon’s front-end experience.",
-  //   link: "https://amazon.com",
-  //   image: "/img2.png",
-  //   techStack: ["React", "Tailwind", "JavaScript"],
-  // },
-  // {
-  //   title: "Meta Dashboard",
-  //   description: "An experimental dashboard UI using Next.js & Tailwind.",
-  //   link: "https://meta.com",
-  //   image: "/img1.png",
-  //   techStack: ["React", "Tailwind"],
-  // },
+  {
+    title: "PrepWise - AI Interview Platform",
+    description:
+      "PrepWise is an AI-powered interview preparation platform that leverages advanced tools like VAPI to provide personalized feedback, skill assessments, and interactive simulations. It helps users excel in technical, behavioral, and mixed interviews with cutting-edge technology and tailored insights.",
+    link: "https://prep-wise-bot.vercel.app/",
+    image: "/assets/PrepWise-cover.png",
+    techStack: ["React", "Next", "Tailwind", "TypeScript"],
+  },
 ];
 
 const Work = () => {

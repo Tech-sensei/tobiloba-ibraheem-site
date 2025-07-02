@@ -55,8 +55,8 @@ const About = () => {
           </div>
 
           <Link
-            href="/Tobiloba_Ibraheem_CV.pdf"
-            // href="/Tobiloba_Ibraheem_resume.pdf"
+            // href="/Tobiloba_Ibraheem_CV.pdf"
+            href="/Tobiloba-ibraheem-resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="w-fit flex items-center gap-3 rounded-full bg-[#08a97c1a] border border-[#08a97c4d] shadow-md backdrop-blur-md px-4 py-1 transition-all duration-500 ease-in-out group cursor-pointer hover:shadow-md mb-4 md:mb-8"
@@ -112,7 +112,7 @@ const About = () => {
                 })}
               </motion.h1>
               <motion.p className="text-2xl md:text-3xl text-neutral-400 font-normal md:ml-2 font-geist leading-normal">
-                {"Frontend Engineer".split(" ").map((word, index) => {
+                {"Frontend Developer".split(" ").map((word, index) => {
                   // const isSpecial = ["Technical", "Knowledge"];
                   return (
                     <motion.span
@@ -162,7 +162,7 @@ const About = () => {
             </div>
 
             <p className="text-sm text-center md:text-left md:text-base text-neutral-400 font-geist md:font-medium mt-6 leading-8 ">
-              I am a frontend Engineer with a passion for creating beautiful and functional user interfaces. I specialize in React, Next.js,
+              I am a frontend Developer with a passion for creating beautiful and functional user interfaces. I specialize in React, Next.js,
               and Tailwind CSS. My work involves transforming complex challenges into simple, elegant design solutions. I enjoy working on
               digital interfaces, interactive experiences, and the convergence of design and technology.
             </p>

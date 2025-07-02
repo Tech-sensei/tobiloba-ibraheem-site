@@ -37,6 +37,14 @@ export const clientProjects = [
     image: "/assets/cs.png",
     techStack: ["React", "Tailwind", "JavaScript"],
   },
+  {
+    title: "Lyvads",
+    description:
+      "A comprehensive digital marketing platform where I developed the admin dashboard and responsive landing page. The admin panel streamlines client management, campaign tracking, and content scheduling, while the landing page showcases the agency's services with an engaging, conversion-focused design. Part of a larger ecosystem that includes a mobile app developed by another team member.",
+    link: "https://lyvads.com/",
+    image: "/assets/lyvads.png",
+    techStack: ["React", "Next", "Tailwind", "JavaScript"],
+  },
 ];
 
 export const personalProjects = [

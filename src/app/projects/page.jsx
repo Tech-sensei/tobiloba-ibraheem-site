@@ -45,6 +45,14 @@ export const clientProjects = [
     image: "/assets/lyvads.png",
     techStack: ["React", "Next", "Tailwind", "JavaScript"],
   },
+  {
+    title: "Kids In Tech",
+    description:
+      "A platform aimed at empowering the next generation of tech leaders through education and mentorship. Kids In Tech provides resources, workshops, and a community for young individuals to explore and excel in technology. Kids in Tech is more than a bootcamp—it’s a foundation for the future, nurturing the next generation of creators and innovators",
+    link: "https://kidsintech.school",
+    image: "/assets/kidsintech.png",
+    techStack: ["React", "Next", "Tailwind", "JavaScript"],
+  },
 ];
 
 export const personalProjects = [

@@ -125,11 +125,11 @@ export function HeroSection() {
             duration: 0.3,
             delay: 1,
           }}
-          className=" mt-4 flex flex-wrap items-center justify-center gap-4"
+          className="mt-6 flex flex-wrap items-center justify-center gap-4"
         >
           <Link
             href="/about"
-            className="inline-flex items-center rounded-full bg-[#151515] border border-[#3f3f3f] shadow-md backdrop-blur-md px-4 py-2 transition-all duration-300 ease-in-out group hover:shadow-lg "
+            className="group relative inline-flex items-center rounded-full bg-purple hover:bg-purple/90 shadow-lg shadow-purple/30 hover:shadow-purple/50 px-6 py-3 transition-all duration-300 ease-in-out hover:scale-105"
           >
             <div className="relative w-7 h-7 rounded-full overflow-hidden shadow-xl mr-2">
               <Image
@@ -143,7 +143,15 @@ export function HeroSection() {
               />
             </div>
             <span className="font-jetBrains font-semibold text-sm text-white">About Me</span>
-            <IoIosArrowRoundForward size={20} className="ml-1 text-white group-hover:translate-x-1 transition-all duration-300" />
+            <IoIosArrowRoundForward size={22} className="ml-1 text-white group-hover:translate-x-1 transition-all duration-300" />
+          </Link>
+
+          <Link
+            href="/projects"
+            className="group inline-flex items-center rounded-full bg-[#151515] border border-[#3f3f3f] hover:border-purple/50 shadow-md backdrop-blur-md px-6 py-3 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple/10"
+          >
+            <span className="font-jetBrains font-semibold text-sm text-white">View Projects</span>
+            <IoIosArrowRoundForward size={22} className="ml-1 text-white group-hover:translate-x-1 transition-all duration-300" />
           </Link>
         </motion.div>
 

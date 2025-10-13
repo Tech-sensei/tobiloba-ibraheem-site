@@ -35,39 +35,43 @@ const About = () => {
           <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-purple to-transparent" />
         </div>
         {/* Profile Card */}
-        <div className="w-full md:w-[30%] md:sticky md:top-16 flex flex-col items-center text-center gap-4">
-          <div className="relative w-52 h-52 rounded-full overflow-hidden shadow-xl self-center">
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="w-full md:w-[30%] md:sticky md:top-16 flex flex-col items-center text-center gap-4"
+        >
+          <div className="relative w-52 h-52 rounded-full overflow-hidden shadow-2xl shadow-purple/20 self-center ring-4 ring-purple/20 hover:ring-purple/40 transition-all duration-300">
             <Image src="/Tobiloba_Ibraheem_png.png" alt="Profile Picture" fill className="object-cover" priority />
           </div>
 
-          <div className="text-white text-base font-jetBrains  flex items-center gap-2">
-            <span>🌏</span>
-            Africa/Nigeria
+          <div className="text-white text-base font-jetBrains flex items-center gap-2 bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-full px-4 py-2">
+            <span>🌍</span>
+            Lagos, Nigeria
           </div>
 
-          <div className="flex items-center gap-2">
-            <button className="flex items-center space-x-2 px-4 py-0.5  rounded-xl w-fit backdrop-blur-md bg-[#08a97c1a] border border-[#08a97c4d]">
-              <span className="text-white text-base font-normal font-jetBrains">English</span>
-            </button>
-            <button className="flex items-center space-x-2 px-4 py-0.5  rounded-xl w-fit backdrop-blur-md bg-[#08a97c1a] border border-[#08a97c4d]">
-              <span className="text-white text-base font-normal font-jetBrains">Yoruba</span>
-            </button>
+          <div className="flex items-center gap-2 flex-wrap justify-center">
+            <span className="flex items-center space-x-2 px-4 py-1.5 rounded-full w-fit backdrop-blur-md bg-purple/20 border border-purple/40">
+              <span className="text-white text-sm font-normal font-jetBrains">English</span>
+            </span>
+            <span className="flex items-center space-x-2 px-4 py-1.5 rounded-full w-fit backdrop-blur-md bg-purple/20 border border-purple/40">
+              <span className="text-white text-sm font-normal font-jetBrains">Yoruba</span>
+            </span>
           </div>
 
           <Link
-            // href="/Tobiloba_Ibraheem_CV.pdf"
             href="/Tobiloba-ibraheem-resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-fit flex items-center gap-3 rounded-full bg-[#08a97c1a] border border-[#08a97c4d] shadow-md backdrop-blur-md px-4 py-1 transition-all duration-500 ease-in-out group cursor-pointer hover:shadow-md mb-4 md:mb-8"
+            className="w-fit flex items-center gap-3 rounded-full bg-purple hover:bg-purple/90 shadow-lg shadow-purple/30 hover:shadow-purple/50 backdrop-blur-md px-6 py-3 transition-all duration-300 ease-in-out group cursor-pointer hover:scale-105 mb-4 md:mb-8"
           >
-            <span className="font-jetBrains font-semibold text-sm md:text-base text-white">Download CV</span>
+            <span className="font-jetBrains font-semibold text-sm text-white">Download CV</span>
             <FiDownload
               size={18}
-              className="text-white group-hover:transform group-hover:translate-y-[2px] transition-all duration-500 ease-in-out"
+              className="text-white group-hover:transform group-hover:translate-y-[2px] transition-all duration-300 ease-in-out"
             />
           </Link>
-        </div>
+        </motion.div>
 
         {/* main profile */}
         <div className="h-auto md:w-[70%] flex flex-col items-center md:items-start gap-14">
@@ -161,114 +165,326 @@ const About = () => {
               </div>
             </div>
 
-            <p className="text-sm text-center md:text-left md:text-base text-neutral-400 font-geist md:font-medium mt-6 leading-8 ">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="text-sm text-center md:text-left md:text-base text-neutral-400 font-geist md:font-medium mt-6 leading-8"
+            >
               I am a frontend Developer with a passion for creating beautiful and functional user interfaces. I specialize in React, Next.js,
               and Tailwind CSS. My work involves transforming complex challenges into simple, elegant design solutions. I enjoy working on
               digital interfaces, interactive experiences, and the convergence of design and technology.
-            </p>
-            <p className="text-sm text-center md:text-left md:text-base text-neutral-400 font-geist md:font-medium mt-6 leading-8 ">
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="text-sm text-center md:text-left md:text-base text-neutral-400 font-geist md:font-medium mt-6 leading-8"
+            >
               When I'm not busy slaying bugs and writing code, I'm usually busy indulging in my two favorite hobbies: playing video game and
               tinkering with gadgets to bring them back to life. I firmly believe that playing video game increases your creativity by 5%.
-            </p>
+            </motion.p>
           </div>
 
           {/* Work experience */}
-          <div className="flex flex-col items-start gap-2 w-full md:max-w-[90%] mx-auto ">
-            <h2 className="text-white text-3xl font-bold font-jetBrains capitalize leading-tight">Work Experience</h2>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            className="flex flex-col items-start gap-2 w-full md:max-w-[90%] mx-auto"
+          >
+            <h2 className="text-white text-3xl font-bold font-jetBrains capitalize leading-tight mb-4">
+              Work <span className="text-purple">Experience</span>
+            </h2>
 
-            {/* work1 */}
-            <div className="flex flex-col items-start gap-4 w-full mt-6">
-              <div className="flex items-start justify-between w-full">
+            {/* work1 - Radiksez */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 1 }}
+              className="flex flex-col items-start gap-4 w-full mt-6 p-6 bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl hover:border-purple/50 transition-all duration-300"
+            >
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between w-full gap-2">
                 <div className="flex flex-col items-start">
-                  <h3 className="text-white text-base font-semibold uppercase font-jetBrains">freelancer</h3>
-                  <span className="text-sm text-[#08a97c] font-geist">Senior Frontend Developer</span>
+                  <h3 className="text-white text-lg font-semibold font-jetBrains">Frontend Developer</h3>
+                  <span className="text-base text-purple font-geist">@Radiksez - Lagos, Nigeria</span>
                 </div>
 
-                <p className="text-white/50 text-sm font-jetBrains">2023 - Present</p>
+                <p className="text-neutral-400 text-sm font-jetBrains md:whitespace-nowrap">Jul 2023 - Present</p>
               </div>
 
-              <ul className="flex flex-col gap-2 items-start w-full">
-                <li className="ml-6  list-disc">
-                  <span className="text-neutral-400 text-sm md:text-base font-geist">
-                    Achieved a 30% reduction in time-to-market by optimizing development pipelines and leveraging CI/CD.
+              <ul className="flex flex-col gap-3 items-start w-full">
+                <li className="ml-6 list-disc">
+                  <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
+                    Led the frontend architecture and design of a scalable platform using React.js and Tailwind CSS, enhancing system performance and usability.
                   </span>
                 </li>
 
-                <li className="ml-6  list-disc">
-                  <span className="text-neutral-400 text-sm md:text-base font-geist">
-                    Provided end-to-end project management, from prototyping and planning to deployment.
+                <li className="ml-6 list-disc">
+                  <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
+                    Partnered with product and design teams to align engineering output with strategic business goals, increasing customer retention by 20%.
                   </span>
                 </li>
 
-                <li className="ml-6  list-disc">
-                  <span className="text-neutral-400 text-sm md:text-base font-geist">
-                    Delivered modern, responsive applications for various industries, consistently meeting deadlines and budget constraints.
+                <li className="ml-6 list-disc">
+                  <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
+                    Implemented API integrations and modular UI components, reducing frontend bugs and integration errors by 30%.
                   </span>
                 </li>
 
-                <li className="ml-6  list-disc">
-                  <span className="text-neutral-400 text-sm md:text-base font-geist">
-                    Established lasting client relationships, with repeat projects based on proven performance.
+                <li className="ml-6 list-disc">
+                  <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
+                    Collaborated in agile sprints, mentoring junior developers on code quality and best practices, improving team delivery velocity by 15%.
+                  </span>
+                </li>
+
+                <li className="ml-6 list-disc">
+                  <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
+                    Optimized UI responsiveness and accessibility, resulting in a 25% improvement in user engagement.
                   </span>
                 </li>
               </ul>
-            </div>
+            </motion.div>
 
-            {/* work2 */}
-            <div className="flex flex-col items-start gap-4 w-full mt-6">
-              <div className="flex items-start justify-between w-full">
+            {/* work2 - Freelance */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 1.2 }}
+              className="flex flex-col items-start gap-4 w-full mt-6 p-6 bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl hover:border-purple/50 transition-all duration-300"
+            >
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between w-full gap-2">
                 <div className="flex flex-col items-start">
-                  <h3 className="text-white text-base font-semibold uppercase font-jetBrains">RADIKSEZ NIG.LG</h3>
-                  <span className="text-sm text-[#08a97c] font-geist">Senior Frontend Developer</span>
+                  <h3 className="text-white text-lg font-semibold font-jetBrains">Frontend Developer</h3>
+                  <span className="text-base text-purple font-geist">(Freelance / Contract)</span>
                 </div>
 
-                <p className="text-white/50 text-sm font-jetBrains">2023 - 2024</p>
+                <p className="text-neutral-400 text-sm font-jetBrains md:whitespace-nowrap">Jun 2023 - Present</p>
               </div>
 
-              <ul className="flex flex-col gap-2 items-start w-full">
-                <li className="ml-6 text-neutral-400 text-sm md:text-base font-geist list-disc">
-                  Increased developer efficiency by 50% by establishing a streamlined design-developer workflow.
+              <ul className="flex flex-col gap-3 items-start w-full">
+                <li className="ml-6 list-disc">
+                  <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
+                    Designed and developed responsive web applications for diverse clients across SaaS, e-commerce, and digital service sectors, ensuring scalable architecture and exceptional user experiences.
+                  </span>
                 </li>
 
-                <li className="ml-6 text-neutral-400 text-sm md:text-base font-geist list-disc">
-                  Delivered a consistent, high-performing user experience across multiple devices.
+                <li className="ml-6 list-disc">
+                  <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
+                    Optimized frontend performance and accessibility through React, Next.js, and TypeScript, achieving faster load times and improved Lighthouse scores.
+                  </span>
                 </li>
 
-                <li className="ml-6 text-neutral-400 text-sm md:text-base font-geist list-disc">
-                  Reduced page-load times by 30% through code-splitting, caching, and image optimization.
+                <li className="ml-6 list-disc">
+                  <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
+                    Built and deployed custom dashboards, marketing websites, and e-commerce platforms that enhanced client engagement and conversion rates.
+                  </span>
+                </li>
+
+                <li className="ml-6 list-disc">
+                  <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
+                    Collaborated with global teams using Git, GitHub, and Agile methodologies to deliver high-quality, maintainable code and meet tight delivery timelines.
+                  </span>
                 </li>
               </ul>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Education*/}
-          <div className="flex flex-col items-start gap-2 w-full md:max-w-[90%] mx-auto ">
-            <h2 className="text-white text-3xl font-bold font-jetBrains capitalize leading-tight">Education</h2>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1.4 }}
+            className="flex flex-col items-start gap-2 w-full md:max-w-[90%] mx-auto"
+          >
+            <h2 className="text-white text-3xl font-bold font-jetBrains capitalize leading-tight mb-4">
+              <span className="text-purple">Education</span>
+            </h2>
 
             {/* education1 */}
-            <div className="flex flex-col items-start gap-4 w-full mt-6">
-              <div className="flex items-start justify-between w-full">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 1.6 }}
+              className="flex flex-col items-start gap-4 w-full mt-6 p-6 bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl hover:border-purple/50 transition-all duration-300"
+            >
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between w-full gap-2">
                 <div className="flex flex-col items-start">
-                  <h3 className="text-white text-base font-semibold uppercase font-jetBrains">Obafemi Awolowo University</h3>
-                  <span className="text-sm text-[#08a97c] font-geist">Bsc. Biochemistry</span>
+                  <h3 className="text-white text-base md:text-lg font-semibold font-jetBrains">Obafemi Awolowo University, Ile Ife, Osun State</h3>
+                  <span className="text-sm md:text-base text-purple font-geist">B.Sc Biochemistry and Molecular Biology</span>
                 </div>
 
-                <p className="text-white/50 text-sm font-jetBrains">2019 - 2024</p>
+                <p className="text-neutral-400 text-sm font-jetBrains md:whitespace-nowrap">Mar 2019 - Sept 2024</p>
               </div>
-            </div>
+            </motion.div>
 
             {/* education2 */}
-            <div className="flex flex-col items-start gap-4 w-full mt-6">
-              <div className="flex items-start justify-between w-full">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 1.8 }}
+              className="flex flex-col items-start gap-4 w-full mt-6 p-6 bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl hover:border-purple/50 transition-all duration-300"
+            >
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between w-full gap-2">
                 <div className="flex flex-col items-start">
-                  <h3 className="text-white text-base font-semibold uppercase font-jetBrains">AltSchool Africa</h3>
-                  <span className="text-sm text-[#08a97c] font-geist">Frontend Engineering</span>
+                  <h3 className="text-white text-base md:text-lg font-semibold font-jetBrains">Altschool Africa, Lagos Nigeria</h3>
+                  <span className="text-sm md:text-base text-purple font-geist">Diploma in Frontend Engineering</span>
                 </div>
 
-                <p className="text-white/50 text-sm font-jetBrains">2022 - 2023</p>
+                <p className="text-neutral-400 text-sm font-jetBrains md:whitespace-nowrap">Jan 2022 - Dec 2023</p>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Skills & Expertise */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 2 }}
+            className="flex flex-col items-start gap-2 w-full md:max-w-[90%] mx-auto"
+          >
+            <h2 className="text-white text-3xl font-bold font-jetBrains capitalize leading-tight mb-4">
+              Skills & <span className="text-purple">Expertise</span>
+            </h2>
+
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 2.2 }}
+              className="flex flex-col items-start gap-6 w-full mt-6 p-6 bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl hover:border-purple/50 transition-all duration-300"
+            >
+              {/* Frontend Development */}
+              <div className="w-full">
+                <h3 className="text-white text-lg font-semibold font-jetBrains mb-3">Frontend Development</h3>
+                <div className="flex flex-wrap gap-2">
+                  {["React.js", "Next.js", "Vue.js", "Nuxt.js", "TypeScript", "JavaScript", "HTML5", "CSS3"].map((skill, idx) => (
+                    <span
+                      key={idx}
+                      className="px-4 py-2 bg-purple/20 text-purple border border-purple/40 rounded-full text-sm font-jetBrains font-semibold hover:bg-purple hover:text-white transition-all duration-300"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Styling & UI */}
+              <div className="w-full">
+                <h3 className="text-white text-lg font-semibold font-jetBrains mb-3">Styling & UI Frameworks</h3>
+                <div className="flex flex-wrap gap-2">
+                  {["Tailwind CSS", "Framer Motion", "Redux", "Styled Components", "SASS/SCSS"].map((skill, idx) => (
+                    <span
+                      key={idx}
+                      className="px-4 py-2 bg-purple/20 text-purple border border-purple/40 rounded-full text-sm font-jetBrains font-semibold hover:bg-purple hover:text-white transition-all duration-300"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Tools & Workflow */}
+              <div className="w-full">
+                <h3 className="text-white text-lg font-semibold font-jetBrains mb-3">Tools & Workflow</h3>
+                <div className="flex flex-wrap gap-2">
+                  {["Git", "GitHub", "Vite", "Webpack", "Figma", "VS Code", "Vercel", "Netlify"].map((skill, idx) => (
+                    <span
+                      key={idx}
+                      className="px-4 py-2 bg-purple/20 text-purple border border-purple/40 rounded-full text-sm font-jetBrains font-semibold hover:bg-purple hover:text-white transition-all duration-300"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Soft Skills */}
+              <div className="w-full">
+                <h3 className="text-white text-lg font-semibold font-jetBrains mb-3">Professional Skills</h3>
+                <div className="flex flex-wrap gap-2">
+                  {["Agile/Scrum", "Team Collaboration", "Code Review", "Mentoring", "Problem Solving", "UI/UX Design"].map((skill, idx) => (
+                    <span
+                      key={idx}
+                      className="px-4 py-2 bg-purple/20 text-purple border border-purple/40 rounded-full text-sm font-jetBrains font-semibold hover:bg-purple hover:text-white transition-all duration-300"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Interests & Hobbies */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 2.4 }}
+            className="flex flex-col items-start gap-2 w-full md:max-w-[90%] mx-auto"
+          >
+            <h2 className="text-white text-3xl font-bold font-jetBrains capitalize leading-tight mb-4">
+              Interests & <span className="text-purple">Hobbies</span>
+            </h2>
+
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 2.6 }}
+              className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mt-6"
+            >
+              {/* Gaming */}
+              <div className="p-6 bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl hover:border-purple/50 transition-all duration-300 group">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-4xl">🎮</span>
+                  <h3 className="text-white text-lg font-semibold font-jetBrains group-hover:text-purple transition-colors duration-300">
+                    Gaming
+                  </h3>
+                </div>
+                <p className="text-neutral-400 text-sm font-geist leading-relaxed">
+                  Passionate gamer who believes that playing video games increases creativity by 5%. I enjoy exploring virtual worlds and solving complex in-game challenges.
+                </p>
+              </div>
+
+              {/* Tech Tinkering */}
+              <div className="p-6 bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl hover:border-purple/50 transition-all duration-300 group">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-4xl">🔧</span>
+                  <h3 className="text-white text-lg font-semibold font-jetBrains group-hover:text-purple transition-colors duration-300">
+                    Tech Tinkering
+                  </h3>
+                </div>
+                <p className="text-neutral-400 text-sm font-geist leading-relaxed">
+                  Love tinkering with gadgets and bringing them back to life. There's something satisfying about understanding how things work and fixing them.
+                </p>
+              </div>
+
+              {/* Learning */}
+              <div className="p-6 bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl hover:border-purple/50 transition-all duration-300 group">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-4xl">📚</span>
+                  <h3 className="text-white text-lg font-semibold font-jetBrains group-hover:text-purple transition-colors duration-300">
+                    Continuous Learning
+                  </h3>
+                </div>
+                <p className="text-neutral-400 text-sm font-geist leading-relaxed">
+                  Always exploring new technologies, frameworks, and best practices. I believe in staying updated with the ever-evolving tech landscape.
+                </p>
+              </div>
+
+              {/* Community */}
+              <div className="p-6 bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl hover:border-purple/50 transition-all duration-300 group">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-4xl">🤝</span>
+                  <h3 className="text-white text-lg font-semibold font-jetBrains group-hover:text-purple transition-colors duration-300">
+                    Community Building
+                  </h3>
+                </div>
+                <p className="text-neutral-400 text-sm font-geist leading-relaxed">
+                  Enjoy sharing knowledge with fellow developers, mentoring juniors, and contributing to the tech community through collaboration.
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
     </main>

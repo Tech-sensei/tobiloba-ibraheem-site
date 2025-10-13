@@ -10,7 +10,7 @@ const navItems = [
   { name: "Home", link: "/", icon: <FaHome /> },
   { name: "About", link: "/about", icon: <FaRegUserCircle /> },
   { name: "Projects", link: "/projects", icon: <FaBriefcase /> },
-  { name: "Blog", link: "/blog", icon: <FaRegNewspaper /> },
+  // { name: "Blog", link: "/blog", icon: <FaRegNewspaper /> },
 ];
 
 export const FloatingNav = ({ className }) => {

@@ -86,75 +86,53 @@ const Work = () => {
           <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-purple to-transparent" />
         </div>
 
-        <div className="px-1 md:px-20 py-16 md:py-28">
+        <div className="px-4 md:px-20 py-16 md:py-28">
           {/* header */}
-          <div className="self-start max-w-3xl text-center md:text-left">
-            <motion.p className="font-bold text-xl md:text-4xl text-white font-jetBrains !leading-[150%]">
-              {"I've been building a lot of things".split(" ").map((word, index) => {
-                // Check if the word is "building" and wrap it in a <span>
-                const isSpecial = word === "building";
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="self-start max-w-3xl text-center md:text-left mb-8"
+          >
+            <h1 className="font-bold text-3xl md:text-5xl text-white font-jetBrains mb-4">
+              My <span className="text-purple">Projects</span>
+            </h1>
 
-                return (
-                  <motion.span
-                    key={index}
-                    initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
-                    animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-                    transition={{
-                      duration: 0.3,
-                      delay: index * 0.1,
-                      ease: "easeInOut",
-                    }}
-                    className={`mr-2 inline-block ${isSpecial ? "text-purple" : ""}`}
-                  >
-                    {word}
-                  </motion.span>
-                );
-              })}
-            </motion.p>
-
-            <motion.p className="text-sm md:text-base text-neutral-400 max-w-2xl py-4 font-geist leading-normal">
-              {" Come explore the fruits of my labor, from small experiments to full-blown web applications, each project showcases my love for coding and design."
-                .split(" ")
-                .map((word, index) => {
-                  // const isSpecial = ["Technical", "Knowledge"];
-                  return (
-                    <motion.span
-                      key={index}
-                      initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
-                      animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-                      transition={{ duration: 0.1, delay: index * 0.1, ease: "easeInOut" }}
-                      className={`mr-2 inline-block text-neutral-400`}
-                    >
-                      {word}
-                    </motion.span>
-                  );
-                })}
-            </motion.p>
-          </div>
+            <p className="text-base md:text-lg text-neutral-400 max-w-2xl font-geist leading-relaxed">
+              Come explore the fruits of my labor, from small experiments to full-blown web applications. Each project showcases my love for coding and design.
+            </p>
+          </motion.div>
 
           {/* Tabs for Client & Personal Projects */}
-          <div className="mt-6 flex justify-center gap-2 md:gap-6 rounded-2xl py-2 px-0.5 md:px-10 border border-[#3f3f3f] shadow-md backdrop-blur-md bg-[#0000004d] md:w-fit w-full mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex justify-center gap-3 mb-12"
+          >
             <button
-              className={`flex items-center space-x-2 mx-0.5 px-4 py-2 text-sm transition-all duration-300 border rounded-xl outline-none  ${
+              className={`px-6 py-3 rounded-full font-jetBrains font-semibold text-sm transition-all duration-300 ${
                 selectedTab === "client"
-                  ? "text-white bg-[#9595951a] border-[#9595954d]"
-                  : "text-white/80 border-[#9595954d] hover:text-white hover:bg-transparent hover:border-[#9595954d]"
+                  ? "bg-purple text-white shadow-lg shadow-purple/30"
+                  : "bg-neutral-900/50 text-neutral-400 border border-neutral-800 hover:border-purple/50 hover:text-white"
               }`}
               onClick={() => setSelectedTab("client")}
             >
-              Client Projects
+              <span className="mr-2">💼</span>
+              Client Projects ({clientProjects.length})
             </button>
             <button
-              className={`flex items-center space-x-2 mx-0.5 px-4 py-2 text-sm transition-all duration-300 border rounded-xl outline-none  ${
+              className={`px-6 py-3 rounded-full font-jetBrains font-semibold text-sm transition-all duration-300 ${
                 selectedTab === "personal"
-                  ? "text-white bg-[#9595951a] border-[#9595954d]"
-                  : "text-white/80 border-[#9595954d] hover:text-white hover:bg-transparent hover:border-[#9595954d]"
+                  ? "bg-purple text-white shadow-lg shadow-purple/30"
+                  : "bg-neutral-900/50 text-neutral-400 border border-neutral-800 hover:border-purple/50 hover:text-white"
               }`}
               onClick={() => setSelectedTab("personal")}
             >
-              Personal Projects
+              <span className="mr-2">🚀</span>
+              Personal Projects ({personalProjects.length})
             </button>
-          </div>
+          </motion.div>
 
           <motion.div
             key={selectedTab}

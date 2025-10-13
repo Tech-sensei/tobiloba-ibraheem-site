@@ -1,86 +1,52 @@
-import localFont from "next/font/local";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ToastContainer, Slide } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Footer from "@/components/views/Footer";
-import ChatFeature from "@/components/ui/Chat";
-import Head from "next/head";
+import Chat from "@/components/ui/Chat";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-const geistSans = localFont({
-  src: [
-    {
-      path: "../../public/fonts/Geist-VariableFont_wght.ttf",
-      weight: "100 900",
-      style: "normal",
-    },
-  ],
+const geistSans = Geist({
   variable: "--font-geist-sans",
-  display: "swap",
+  subsets: ["latin"],
 });
 
-const jetBrainsMono = localFont({
-  src: [
-    {
-      path: "../../public/fonts/JetBrainsMono-VariableFont_wght.ttf",
-      weight: "100 900",
-      style: "normal",
-    },
-  ],
+const geistMono = Geist_Mono({
   variable: "--font-jetbrains-mono",
-  display: "swap",
+  subsets: ["latin"],
 });
 
 export const metadata = {
-  title: "Tobiloba Ibraheem | Frontend Engineer",
-  description:
-    "Explore the portfolio of Tobiloba Ibraheem, a frontend engineer specializing in crafting elegant, user-friendly web solutions.",
+  title: "Tobiloba Ibraheem - Frontend Engineer",
+  description: "Portfolio of Tobiloba Ibraheem, a frontend engineer specializing in React, Next.js, and modern web technologies.",
+  keywords: "frontend developer, React developer, Next.js, web development, portfolio",
+  authors: [{ name: "Tobiloba Ibraheem" }],
+  creator: "Tobiloba Ibraheem",
   openGraph: {
-    title: "Tobiloba Ibraheem | Frontend Engineer",
-    description: "A dedicated frontend engineer👨🏽‍💻 with a knack for transforming complex challenges into elegant, user-friendly solutions.",
-    url: "https://tobiloba-ibraheem-site.vercel.app/",
-    siteName: "Tobiloba Ibraheem Portfolio",
-    images: [
-      {
-        url: "/assets/img192.png",
-        width: 1200,
-        height: 630,
-        alt: "Tobiloba Ibraheem Portfolio",
-      },
-    ],
-    locale: ["en_US","en_NG"],
     type: "website",
+    locale: "en_US",
+    url: "https://tobiloba-ibraheem.vercel.app",
+    title: "Tobiloba Ibraheem - Frontend Engineer",
+    description: "Portfolio of Tobiloba Ibraheem, a frontend engineer specializing in React, Next.js, and modern web technologies.",
+    siteName: "Tobiloba Ibraheem Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tobiloba Ibraheem - Frontend Engineer",
+    description: "Portfolio of Tobiloba Ibraheem, a frontend engineer specializing in React, Next.js, and modern web technologies.",
+    creator: "@Im_Tobilobah",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta property="og:description" content={metadata.openGraph.description} />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:site_name" content={metadata.openGraph.siteName} />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta property="og:image:width" content={metadata.openGraph.images[0].width} />
-        <meta property="og:image:height" content={metadata.openGraph.images[0].height} />
-        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
-        <meta property="og:type" content={metadata.openGraph.type} />
-        <meta property="og:locale" content={metadata.openGraph.locale} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={metadata.title} />
-        <meta name="twitter:description" content={metadata.description} />
-        <meta name="twitter:image" content={metadata.openGraph.images[0].url} />
-        <link rel="canonical" href={metadata.openGraph.url} />
-      </Head>
-      <body className={`${geistSans.variable} ${jetBrainsMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <FloatingNav />
-        <ToastContainer position="bottom-center" autoClose={4000} hideProgressBar={false} closeOnClick transition={Slide} theme="dark" />
         {children}
-        <ChatFeature />
         <Footer />
+        <Chat />
+        <ToastContainer />
       </body>
     </html>
   );

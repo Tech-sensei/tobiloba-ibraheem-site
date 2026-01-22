@@ -3,6 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 @layer base {
   :root {
     --background: 0, 3, 25, 1;
@@ -27,8 +29,7 @@
   }
 
   body {
-    background-color: rgba(var(--background));
-    color: hsl(var(--foreground));
+    @apply bg-background text-foreground;
   }
 
   button {

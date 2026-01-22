@@ -59,10 +59,11 @@ const About = () => {
             </span>
           </div>
 
-          <Link
-            href="/Tobiloba-Ibraheem-CV.pdf"
+          <a
+            href="/Tobiloba-ibraheem_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            download
             className="w-fit flex items-center gap-3 rounded-full bg-purple hover:bg-purple/90 shadow-lg shadow-purple/30 hover:shadow-purple/50 backdrop-blur-md px-6 py-3 transition-all duration-300 ease-in-out group cursor-pointer hover:scale-105 mb-4 md:mb-8"
           >
             <span className="font-jetBrains font-semibold text-sm text-white">Download CV</span>
@@ -70,7 +71,7 @@ const About = () => {
               size={18}
               className="text-white group-hover:transform group-hover:translate-y-[2px] transition-all duration-300 ease-in-out"
             />
-          </Link>
+          </a>
         </motion.div>
 
         {/* main profile */}

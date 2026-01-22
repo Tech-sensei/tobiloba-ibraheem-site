@@ -29,7 +29,8 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    background-color: rgba(var(--background));
+    color: hsl(var(--foreground));
   }
 
   button {

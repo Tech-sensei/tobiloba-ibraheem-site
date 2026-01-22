@@ -60,7 +60,7 @@ const About = () => {
           </div>
 
           <Link
-            href="/Tobiloba-ibraheem-resume.pdf"
+            href="/Tobiloba-Ibraheem_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="w-fit flex items-center gap-3 rounded-full bg-purple hover:bg-purple/90 shadow-lg shadow-purple/30 hover:shadow-purple/50 backdrop-blur-md px-6 py-3 transition-all duration-300 ease-in-out group cursor-pointer hover:scale-105 mb-4 md:mb-8"
@@ -171,9 +171,9 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="text-sm text-center md:text-left md:text-base text-neutral-400 font-geist md:font-medium mt-6 leading-8"
             >
-              I am a frontend Developer with a passion for creating beautiful and functional user interfaces. I specialize in React, Next.js,
-              and Tailwind CSS. My work involves transforming complex challenges into simple, elegant design solutions. I enjoy working on
-              digital interfaces, interactive experiences, and the convergence of design and technology.
+              I am a frontend Developer with a passion for creating beautiful and functional user interfaces. I specialize in React,
+              Next.js, and Tailwind CSS. My work involves transforming complex challenges into simple, elegant design solutions. I enjoy
+              working on digital interfaces, interactive experiences, and the convergence of design and technology.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -210,19 +210,21 @@ const About = () => {
                   <span className="text-base text-purple font-geist">@Radiksez - Lagos, Nigeria</span>
                 </div>
 
-                <p className="text-neutral-400 text-sm font-jetBrains md:whitespace-nowrap">Nov 2025 - Present</p>
+                <p className="text-neutral-400 text-sm font-jetBrains md:whitespace-nowrap">Jul 2023 - Present</p>
               </div>
 
               <ul className="flex flex-col gap-3 items-start w-full">
                 <li className="ml-6 list-disc">
                   <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
-                    Led the frontend architecture and design of a scalable platform using React.js and Tailwind CSS, enhancing system performance and usability.
+                    Led the frontend architecture and design of a scalable platform using React.js and Tailwind CSS, enhancing system
+                    performance and usability.
                   </span>
                 </li>
 
                 <li className="ml-6 list-disc">
                   <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
-                    Partnered with product and design teams to align engineering output with strategic business goals, increasing customer retention by 20%.
+                    Partnered with product and design teams to align engineering output with strategic business goals, increasing customer
+                    retention by 20%.
                   </span>
                 </li>
 
@@ -234,7 +236,8 @@ const About = () => {
 
                 <li className="ml-6 list-disc">
                   <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
-                    Collaborated in agile sprints, mentoring junior developers on code quality and best practices, improving team delivery velocity by 15%.
+                    Collaborated in agile sprints, mentoring junior developers on code quality and best practices, improving team delivery
+                    velocity by 15%.
                   </span>
                 </li>
 
@@ -265,25 +268,29 @@ const About = () => {
               <ul className="flex flex-col gap-3 items-start w-full">
                 <li className="ml-6 list-disc">
                   <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
-                    Designed and developed responsive web applications for diverse clients across SaaS, e-commerce, and digital service sectors, ensuring scalable architecture and exceptional user experiences.
+                    Designed and developed responsive web applications for diverse clients across SaaS, e-commerce, and digital service
+                    sectors, ensuring scalable architecture and exceptional user experiences.
                   </span>
                 </li>
 
                 <li className="ml-6 list-disc">
                   <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
-                    Optimized frontend performance and accessibility through React, Next.js, and TypeScript, achieving faster load times and improved Lighthouse scores.
+                    Optimized frontend performance and accessibility through React, Next.js, and TypeScript, achieving faster load times and
+                    improved Lighthouse scores.
                   </span>
                 </li>
 
                 <li className="ml-6 list-disc">
                   <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
-                    Built and deployed custom dashboards, marketing websites, and e-commerce platforms that enhanced client engagement and conversion rates.
+                    Built and deployed custom dashboards, marketing websites, and e-commerce platforms that enhanced client engagement and
+                    conversion rates.
                   </span>
                 </li>
 
                 <li className="ml-6 list-disc">
                   <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
-                    Collaborated with global teams using Git, GitHub, and Agile methodologies to deliver high-quality, maintainable code and meet tight delivery timelines.
+                    Collaborated with global teams using Git, GitHub, and Agile methodologies to deliver high-quality, maintainable code and
+                    meet tight delivery timelines.
                   </span>
                 </li>
               </ul>
@@ -310,7 +317,9 @@ const About = () => {
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between w-full gap-2">
                 <div className="flex flex-col items-start">
-                  <h3 className="text-white text-base md:text-lg font-semibold font-jetBrains">Obafemi Awolowo University, Ile Ife, Osun State</h3>
+                  <h3 className="text-white text-base md:text-lg font-semibold font-jetBrains">
+                    Obafemi Awolowo University, Ile Ife, Osun State
+                  </h3>
                   <span className="text-sm md:text-base text-purple font-geist">B.Sc Biochemistry and Molecular Biology</span>
                 </div>
 
@@ -402,14 +411,16 @@ const About = () => {
               <div className="w-full">
                 <h3 className="text-white text-lg font-semibold font-jetBrains mb-3">Professional Skills</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Agile/Scrum", "Team Collaboration", "Code Review", "Mentoring", "Problem Solving", "UI/UX Design"].map((skill, idx) => (
-                    <span
-                      key={idx}
-                      className="px-4 py-2 bg-purple/20 text-purple border border-purple/40 rounded-full text-sm font-jetBrains font-semibold hover:bg-purple hover:text-white transition-all duration-300"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                  {["Agile/Scrum", "Team Collaboration", "Code Review", "Mentoring", "Problem Solving", "UI/UX Design"].map(
+                    (skill, idx) => (
+                      <span
+                        key={idx}
+                        className="px-4 py-2 bg-purple/20 text-purple border border-purple/40 rounded-full text-sm font-jetBrains font-semibold hover:bg-purple hover:text-white transition-all duration-300"
+                      >
+                        {skill}
+                      </span>
+                    ),
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -441,7 +452,8 @@ const About = () => {
                   </h3>
                 </div>
                 <p className="text-neutral-400 text-sm font-geist leading-relaxed">
-                  Passionate gamer who believes that playing video games increases creativity by 5%. I enjoy exploring virtual worlds and solving complex in-game challenges.
+                  Passionate gamer who believes that playing video games increases creativity by 5%. I enjoy exploring virtual worlds and
+                  solving complex in-game challenges.
                 </p>
               </div>
 
@@ -454,7 +466,8 @@ const About = () => {
                   </h3>
                 </div>
                 <p className="text-neutral-400 text-sm font-geist leading-relaxed">
-                  Love tinkering with gadgets and bringing them back to life. There's something satisfying about understanding how things work and fixing them.
+                  Love tinkering with gadgets and bringing them back to life. There's something satisfying about understanding how things
+                  work and fixing them.
                 </p>
               </div>
 
@@ -467,7 +480,8 @@ const About = () => {
                   </h3>
                 </div>
                 <p className="text-neutral-400 text-sm font-geist leading-relaxed">
-                  Always exploring new technologies, frameworks, and best practices. I believe in staying updated with the ever-evolving tech landscape.
+                  Always exploring new technologies, frameworks, and best practices. I believe in staying updated with the ever-evolving
+                  tech landscape.
                 </p>
               </div>
 
@@ -480,7 +494,8 @@ const About = () => {
                   </h3>
                 </div>
                 <p className="text-neutral-400 text-sm font-geist leading-relaxed">
-                  Enjoy sharing knowledge with fellow developers, mentoring juniors, and contributing to the tech community through collaboration.
+                  Enjoy sharing knowledge with fellow developers, mentoring juniors, and contributing to the tech community through
+                  collaboration.
                 </p>
               </div>
             </motion.div>

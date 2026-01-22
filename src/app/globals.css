@@ -2,14 +2,38 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: rgb(0, 3, 25);
+  /* Background and Foreground Colors */
+  --color-background: rgba(0, 3, 25, 1);
   --color-foreground: hsl(0 0% 98%);
+  
+  /* Primary Colors */
   --color-primary: hsl(240 5.9% 10%);
   --color-primary-foreground: hsl(0 0% 98%);
+  
+  /* Secondary Colors */
   --color-secondary: hsl(240 4.8% 95.9%);
   --color-secondary-foreground: hsl(240 5.9% 10%);
+  
+  /* Accent Colors */
   --color-accent: hsl(240 4.8% 95.9%);
   --color-accent-foreground: hsl(240 5.9% 10%);
+  
+  /* Black Colors */
+  --color-black: #000;
+  --color-black-100: #000319;
+  --color-black-200: rgba(17, 25, 40, 0.75);
+  --color-black-300: rgba(255, 255, 255, 0.125);
+  
+  /* White Colors */
+  --color-white: #FFF;
+  --color-white-100: #BEC1DD;
+  --color-white-200: #C1C2D3;
+  
+  /* Blue Colors */
+  --color-blue-100: #E4ECFF;
+  
+  /* Purple Color */
+  --color-purple: #08a97c;
 }
 
 @layer base {
@@ -25,6 +49,20 @@
 
     --accent: 240 4.8% 95.9%;
     --accent-foreground: 240 5.9% 10%;
+    
+    /* Custom color variables from config */
+    --black: #000;
+    --black-100: #000319;
+    --black-200: rgba(17, 25, 40, 0.75);
+    --black-300: rgba(255, 255, 255, 0.125);
+    
+    --white: #FFF;
+    --white-100: #BEC1DD;
+    --white-200: #C1C2D3;
+    
+    --blue-100: #E4ECFF;
+    
+    --purple: #08a97c;
   }
 
   * {
@@ -36,8 +74,7 @@
   }
 
   body {
-    background-color: rgb(var(--background));
-    color: hsl(var(--foreground));
+    @apply bg-background text-foreground;
   }
 
   button {

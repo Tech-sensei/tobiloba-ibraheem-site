@@ -211,7 +211,7 @@ const About = () => {
                   <span className="text-base text-purple font-geist">@Radiksez - Lagos, Nigeria</span>
                 </div>
 
-                <p className="text-neutral-400 text-sm font-jetBrains md:whitespace-nowrap">July 2023 - Present</p>
+                <p className="text-neutral-400 text-sm font-jetBrains md:whitespace-nowrap">August 2024 - Present</p>
               </div>
 
               <ul className="flex flex-col gap-3 items-start w-full">

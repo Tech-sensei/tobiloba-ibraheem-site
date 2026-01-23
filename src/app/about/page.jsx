@@ -207,47 +207,34 @@ const About = () => {
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between w-full gap-2">
                 <div className="flex flex-col items-start">
-                  <h3 className="text-white text-lg font-semibold font-jetBrains">Software Engineer</h3>
-                  <span className="text-base text-purple font-geist">@Radiksez - Lagos, Nigeria</span>
+                  <h3 className="text-white text-lg font-semibold font-jetBrains">Frontend Engineer</h3>
+                  <span className="text-base text-purple font-geist">Radiksez</span>
+                  <div className="flex items-center gap-2 mt-1">
+                    <span className="text-neutral-400 text-xs font-geist">Full-time</span>
+                    <span className="text-neutral-500">·</span>
+                    <span className="text-neutral-400 text-xs font-geist">Lagos State, Nigeria · Remote</span>
+                  </div>
                 </div>
 
-                <p className="text-neutral-400 text-sm font-jetBrains md:whitespace-nowrap">August 2024 - Present</p>
+                <div className="flex flex-col items-end">
+                  <p className="text-neutral-400 text-sm font-jetBrains md:whitespace-nowrap">Nov 2025 - Present</p>
+                  <p className="text-neutral-500 text-xs font-jetBrains">3 mos</p>
+                </div>
               </div>
 
-              <ul className="flex flex-col gap-3 items-start w-full">
-                <li className="ml-6 list-disc">
-                  <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
-                    Led the frontend architecture and design of a scalable platform using React.js, enhancing system performance and usability.
-                  </span>
-                </li>
+              <p className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
+                Spearheading the development of Radiksez's core web platform, improving page load time by 40% through code optimization and efficient image handling. Building scalable frontend solutions using modern React.js and TypeScript, ensuring maintainable and performant codebase.
+              </p>
 
-                <li className="ml-6 list-disc">
-                  <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
-                    Partnered with product and design teams to align engineering output with strategic business goals, increasing customer retention by 20%.
-                  </span>
-                </li>
-
-                <li className="ml-6 list-disc">
-                  <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
-                    Implemented API integrations and modular UI components, reducing frontend bugs and integration errors by 30%.
-                  </span>
-                </li>
-
-                <li className="ml-6 list-disc">
-                  <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
-                    Collaborated in agile sprints, mentoring junior developers on code quality and best practices, improving team delivery velocity by 15%.
-                  </span>
-                </li>
-
-                <li className="ml-6 list-disc">
-                  <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
-                    Optimized UI responsiveness and accessibility, resulting in a 25% improvement in user engagement.
-                  </span>
-                </li>
-              </ul>
+              <div className="flex flex-wrap gap-2 mt-2">
+                <span className="px-3 py-1 bg-purple/20 text-purple border border-purple/40 rounded-full text-xs font-jetBrains">JavaScript</span>
+                <span className="px-3 py-1 bg-purple/20 text-purple border border-purple/40 rounded-full text-xs font-jetBrains">TypeScript</span>
+                <span className="px-3 py-1 bg-purple/20 text-purple border border-purple/40 rounded-full text-xs font-jetBrains">React.js</span>
+                <span className="px-3 py-1 bg-purple/20 text-purple border border-purple/40 rounded-full text-xs font-jetBrains">Next.js</span>
+              </div>
             </motion.div>
 
-            {/* work2 - Freelance */}
+            {/* work2 - EverythingAfrican */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -256,38 +243,69 @@ const About = () => {
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between w-full gap-2">
                 <div className="flex flex-col items-start">
-                  <h3 className="text-white text-lg font-semibold font-jetBrains">Frontend Developer</h3>
-                  <span className="text-base text-purple font-geist">(Freelance / Contract)</span>
+                  <h3 className="text-white text-lg font-semibold font-jetBrains">Frontend Engineer</h3>
+                  <span className="text-base text-purple font-geist">EVERYTHINGAFRICAN LTD.</span>
+                  <div className="flex items-center gap-2 mt-1">
+                    <span className="text-neutral-400 text-xs font-geist">Contract</span>
+                    <span className="text-neutral-500">·</span>
+                    <span className="text-neutral-400 text-xs font-geist">Manchester, England, United Kingdom · Remote</span>
+                  </div>
                 </div>
 
-                <p className="text-neutral-400 text-sm font-jetBrains md:whitespace-nowrap">Jun 2023 - Present</p>
+                <div className="flex flex-col items-end">
+                  <p className="text-neutral-400 text-sm font-jetBrains md:whitespace-nowrap">Jun 2024 - Oct 2025</p>
+                  <p className="text-neutral-500 text-xs font-jetBrains">1 yr 5 mos</p>
+                </div>
               </div>
 
-              <ul className="flex flex-col gap-3 items-start w-full">
-                <li className="ml-6 list-disc">
-                  <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
-                    Designed and developed responsive web applications for diverse clients across SaaS, e-commerce, and digital service sectors, ensuring scalable architecture and exceptional user experiences.
-                  </span>
-                </li>
+              <p className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
+                Developed and maintained core e-commerce features using React.js and Next.js, ensuring high performance and smooth user experience. Implemented responsive designs and optimized frontend performance, contributing to improved conversion rates and customer satisfaction.
+              </p>
 
-                <li className="ml-6 list-disc">
-                  <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
-                    Optimized frontend performance and accessibility through React, Next.js, and TypeScript, achieving faster load times and improved Lighthouse scores.
-                  </span>
-                </li>
+              <div className="flex flex-wrap gap-2 mt-2">
+                <span className="px-3 py-1 bg-purple/20 text-purple border border-purple/40 rounded-full text-xs font-jetBrains">JavaScript</span>
+                <span className="px-3 py-1 bg-purple/20 text-purple border border-purple/40 rounded-full text-xs font-jetBrains">TypeScript</span>
+                <span className="px-3 py-1 bg-purple/20 text-purple border border-purple/40 rounded-full text-xs font-jetBrains">React.js</span>
+                <span className="px-3 py-1 bg-purple/20 text-purple border border-purple/40 rounded-full text-xs font-jetBrains">Next.js</span>
+                <span className="px-3 py-1 bg-purple/20 text-purple border border-purple/40 rounded-full text-xs font-jetBrains">Tailwind CSS</span>
+              </div>
+            </motion.div>
 
-                <li className="ml-6 list-disc">
-                  <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
-                    Built and deployed custom dashboards, marketing websites, and e-commerce platforms that enhanced client engagement and conversion rates.
-                  </span>
-                </li>
+            {/* work3 - Lyvadsinc */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 1.4 }}
+              className="flex flex-col items-start gap-4 w-full mt-6 p-6 bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl hover:border-purple/50 transition-all duration-300"
+            >
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between w-full gap-2">
+                <div className="flex flex-col items-start">
+                  <h3 className="text-white text-lg font-semibold font-jetBrains">Frontend Engineer</h3>
+                  <span className="text-base text-purple font-geist">Lyvadsinc.</span>
+                  <div className="flex items-center gap-2 mt-1">
+                    <span className="text-neutral-400 text-xs font-geist">Contract</span>
+                    <span className="text-neutral-500">·</span>
+                    <span className="text-neutral-400 text-xs font-geist">Lagos, Lagos State, Nigeria · Remote</span>
+                  </div>
+                </div>
 
-                <li className="ml-6 list-disc">
-                  <span className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
-                    Collaborated with global teams using Git, GitHub, and Agile methodologies to deliver high-quality, maintainable code and meet tight delivery timelines.
-                  </span>
-                </li>
-              </ul>
+                <div className="flex flex-col items-end">
+                  <p className="text-neutral-400 text-sm font-jetBrains md:whitespace-nowrap">Mar 2024 - Aug 2025</p>
+                  <p className="text-neutral-500 text-xs font-jetBrains">1 yr 6 mos</p>
+                </div>
+              </div>
+
+              <p className="text-neutral-300 text-sm md:text-base font-geist leading-relaxed">
+                Built and maintained the admin dashboard and marketing landing website using React.js, TypeScript, and Tailwind CSS, ensuring scalability and clean UI architecture. Collaborated with cross-functional teams to deliver high-quality features and improve user experience.
+              </p>
+
+              <div className="flex flex-wrap gap-2 mt-2">
+                <span className="px-3 py-1 bg-purple/20 text-purple border border-purple/40 rounded-full text-xs font-jetBrains">Nuxt.js</span>
+                <span className="px-3 py-1 bg-purple/20 text-purple border border-purple/40 rounded-full text-xs font-jetBrains">Vue.js</span>
+                <span className="px-3 py-1 bg-purple/20 text-purple border border-purple/40 rounded-full text-xs font-jetBrains">React.js</span>
+                <span className="px-3 py-1 bg-purple/20 text-purple border border-purple/40 rounded-full text-xs font-jetBrains">TypeScript</span>
+                <span className="px-3 py-1 bg-purple/20 text-purple border border-purple/40 rounded-full text-xs font-jetBrains">Tailwind CSS</span>
+              </div>
             </motion.div>
           </motion.div>
 

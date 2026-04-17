@@ -69,7 +69,7 @@ const About = () => {
             <span className="font-jetBrains font-semibold text-sm text-white">Download CV</span>
             <FiDownload
               size={18}
-              className="text-white group-hover:transform group-hover:translate-y-[2px] transition-all duration-300 ease-in-out"
+              className="text-white group-hover:transform group-hover:translate-y-0.5 transition-all duration-300 ease-in-out"
             />
           </a>
         </motion.div>

@@ -60,7 +60,7 @@ const About = () => {
           </div>
 
           <a
-            href="/Tobiloba-ibraheem_CV.pdf"
+            href="/Tobiloba-Ibraheem_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
             download

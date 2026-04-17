@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(node -e \"const si = require\\('./node_modules/react-icons/si/index.js'\\); const nuxtKeys = Object.keys\\(si\\).filter\\(k => k.toLowerCase\\(\\).includes\\('nuxt'\\)\\); console.log\\(nuxtKeys\\);\")"
+    ]
+  }
+}

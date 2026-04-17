@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa"; // Import GitHub icon
-import { SiJavascript, SiReact, SiTypescript, SiTailwindcss, SiVuedotjs, SiNextdotjs, SiNuxtdotjs } from "react-icons/si";
+import { SiJavascript, SiReact, SiTypescript, SiTailwindcss, SiVuedotjs, SiNextdotjs, SiNuxt } from "react-icons/si";
 
 export const HoverEffect = ({ items, className }) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
@@ -84,7 +84,7 @@ export const HoverEffect = ({ items, className }) => {
               )}
               {item.techStack.includes("Nuxt") && (
                 <div className="p-2 bg-neutral-800/50 rounded-lg hover:bg-purple/20 transition-colors duration-300">
-                  <SiNuxtdotjs className="text-green-400 text-xl" />
+                  <SiNuxt className="text-green-400 text-xl" />
                 </div>
               )}
             </div>
